@@ -1,0 +1,33 @@
+@use "mixins" as *;
+
+.account_container {
+  display: grid;
+  /* @link https://utopia.fyi/clamp/calculator?a=320,1440,16—56 */
+  gap: clamp(1rem, 0.8571rem + 1.0143vw, 3.5rem);
+  @include tablet() {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.account_form {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.account_img {
+  display: none;
+  @include tablet() {
+    display: block;
+    border-radius: 30px;
+    padding: 10px;
+  }
+}
+
+.account_link {
+  display: inline;
+  text-decoration: underline;
+  font-family: "Satoshi", sans-serif;
+}

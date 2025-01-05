@@ -1,0 +1,159 @@
+/* @link https://utopia.fyi/clamp/calculator?a=320,1440,27—30 */
+$section-pad: clamp(1.6875rem, 1.6339rem + 0.2679vw, 1.875rem);
+
+.marquee-container {
+  overflow: hidden;
+  background-color: black;
+  color: white;
+  border-block: 2px solid white;
+  transition-property: color, background-color, border-bottom;
+  transition: 0.5s ease;
+  display: flex;
+  gap: 60px;
+  position: relative;
+  z-index: 1;
+  &:hover {
+    color: black;
+    background-color: white;
+    border-block: 2px solid black;
+  }
+}
+
+.marquee {
+  display: flex;
+  gap: 60px;
+  text-wrap: nowrap;
+  font-family: "Robson", sans-serif;
+  font-size: 6rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding-block: 30px;
+  div {
+    display: flex;
+    gap: 30px;
+  }
+}
+
+.footer_container {
+  background-color: black;
+  padding-top: 50px;
+  position: sticky;
+  height: 100vh;
+  bottom: 0;
+}
+
+footer {
+  min-height: 100vh;
+  padding: $section-pad;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.footer_top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  gap: 80px 30px;
+}
+
+.newsletter {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  label {
+    font-family: "Robson", sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+  }
+  input {
+    margin-top: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-family: "Satoshi", sans-serif;
+  }
+  button {
+    padding: 15px;
+    border-radius: 10px;
+    font-family: "Robson", sans-serif;
+    margin-top: 40px;
+    font-weight: 900;
+    font-size: 2rem;
+    background-color: white;
+  }
+}
+
+.footer_item {
+  flex: 300px;
+  display: flex;
+  gap: 20px;
+  h3 {
+    font-size: 2rem;
+    writing-mode: vertical-lr;
+    text-orientation: sideways-right;
+    font-weight: 900;
+    color: white;
+  }
+}
+
+.footer_nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 3rem;
+  font-family: "Robson", sans-serif;
+  font-weight: 900;
+
+  a {
+    color: white;
+  }
+}
+
+.purposes {
+  max-width: 320px;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.footer_social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  color: white;
+}
+
+.copyright {
+  text-align: center;
+  color: white;
+}
+
+.footer_bottom {
+  margin-top: 70px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: "Satoshi", sans-serif;
+  margin-top: 50px;
+}
+
+@media (min-width: 850px) {
+  .footer_bottom {
+    margin-top: 0px;
+    padding-block: 30px;
+    justify-content: space-between;
+  }
+
+  .copyright {
+    margin-top: 0;
+  }
+}

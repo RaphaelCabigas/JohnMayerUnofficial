@@ -1,0 +1,276 @@
+@use "header";
+@use "footer";
+
+/* @link https://utopia.fyi/clamp/calculator?a=320,1440,27—30 */
+$section-pad: clamp(1.6875rem, 1.6339rem + 0.2679vw, 1.875rem);
+
+// CSS RESET: resets default spacing values
+* {
+  margin: 0;
+  padding: 0;
+  // Width and height takes account of border and padding spacing
+  box-sizing: border-box;
+}
+
+// Styles scrollbar
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: black;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-y: auto;
+}
+
+body {
+  background-color: white;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+  font-family: "Robson", serif;
+}
+
+h1 {
+  /* @link https://utopia.fyi/clamp/calculator?a=320,1440,40—100 */
+  font-size: clamp(2.5rem, 1.4286rem + 5.3571vw, 6.25rem);
+  font-weight: 900;
+}
+
+h2 {
+  /* @link https://utopia.fyi/clamp/calculator?a=320,1440,38—90 */
+  font-size: clamp(2.375rem, 1.4464rem + 4.6429vw, 5.625rem);
+  font-weight: 900;
+}
+
+p {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  font-family: "Satoshi", sans-serif;
+}
+
+a {
+  display: block;
+  color: inherit;
+  font-family: "Robson", serif;
+  text-decoration: none;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+ol,
+ul {
+  list-style-type: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  font-family: "Satoshi", sans-serif;
+  font-weight: 400;
+}
+
+svg {
+  width: 40px;
+  height: 40px;
+}
+
+main {
+  min-height: 100vh;
+  background-color: #030305;
+  position: relative;
+  z-index: 1;
+}
+
+section {
+  min-height: 100vh;
+  background-color: white;
+  padding-inline: $section-pad;
+}
+
+.hide_text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.section_span {
+  font-family: "Robson", sans-serif;
+  font-weight: 900;
+  font-size: 1.7rem;
+}
+
+.p-container {
+  margin-top: 1.5rem;
+}
+
+.next_img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+// SCSS for Robson Font Family
+@font-face {
+  font-family: "Robson";
+  src: url("../public/fonts/Robson/Robson-Thin.otf") format("opentype");
+  font-weight: 100; // Thin
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Robson";
+  src: url("../public/fonts/Robson/Robson-Extralight.otf") format("opentype");
+  font-weight: 200; // ExtraLight
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Robson";
+  src: url("../public/fonts/Robson/Robson-Light.otf") format("opentype");
+  font-weight: 300; // Light
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Robson";
+  src: url("../public/fonts/Robson/Robson-Regular.otf") format("opentype");
+  font-weight: 400; // Regular
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Robson";
+  src: url("../public/fonts/Robson/Robson-Medium.otf") format("opentype");
+  font-weight: 500; // Medium
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Robson";
+  src: url("../public/fonts/Robson/Robson-Semibold.otf") format("opentype");
+  font-weight: 600; // Semibold
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Robson";
+  src: url("../public/fonts/Robson/Robson-Bold.otf") format("opentype");
+  font-weight: 700; // Bold
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Robson";
+  src: url("../public/fonts/Robson/Robson-Extrabold.otf") format("opentype");
+  font-weight: 800; // ExtraBold
+  font-style: normal;
+}
+
+// SCSS for Satoshi Font Family
+@font-face {
+  font-family: "Satoshi";
+  src: url("../public/fonts/Satoshi/Satoshi-Light.otf") format("opentype");
+  font-weight: 300; // Light
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../public/fonts/Satoshi/Satoshi-LightItalic.otf") format("opentype");
+  font-weight: 300; // Light
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../public/fonts/Satoshi/Satoshi-Regular.otf") format("opentype");
+  font-weight: 400; // Regular
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../public/fonts/Satoshi/Satoshi-Italic.otf") format("opentype");
+  font-weight: 400; // Italic
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../public/fonts/Satoshi/Satoshi-Medium.otf") format("opentype");
+  font-weight: 500; // Medium
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../public/fonts/Satoshi/Satoshi-MediumItalic.otf")
+    format("opentype");
+  font-weight: 500; // Medium
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../public/fonts/Satoshi/Satoshi-Bold.otf") format("opentype");
+  font-weight: 700; // Bold
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../public/fonts/Satoshi/Satoshi-BoldItalic.otf") format("opentype");
+  font-weight: 700; // Bold
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../public/fonts/Satoshi/Satoshi-Black.otf") format("opentype");
+  font-weight: 800; // Black
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../public/fonts/Satoshi/Satoshi-BlackItalic.otf") format("opentype");
+  font-weight: 800; // Black
+  font-style: italic;
+}

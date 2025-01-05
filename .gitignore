@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+src/app/not-found.jsx
+src/app/loading.jsx
+styles/loading.module.scss
+styles/notfound.module.scss

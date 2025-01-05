@@ -1,0 +1,113 @@
+@use "mixins" as *;
+
+/* @link https://utopia.fyi/clamp/calculator?a=320,1440,27—30 */
+$section-pad: clamp(1.6875rem, 1.6339rem + 0.2679vw, 1.875rem);
+
+.hero {
+  // HERO SECTION
+  padding: $section-pad;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: end;
+  /* @link https://utopia.fyi/clamp/calculator?a=320,1440,16—56 */
+  gap: clamp(1rem, 0.8571rem + 1.0143vw, 3.5rem);
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  background-color: transparent;
+}
+
+.h1_container {
+  // H1 SVGS CONTAINER
+  align-self: end;
+  display: flex;
+  flex-direction: column;
+  gap: 5vw 0;
+  overflow: hidden;
+  @include tablet() {
+    flex-direction: row;
+    gap: 0 3vw;
+  }
+}
+
+span {
+  // H1 SVGS
+  &:nth-of-type(2) {
+    .h1_svgs {
+      width: 35%;
+    }
+  }
+
+  &:nth-of-type(3) {
+    .h1_svgs {
+      width: 45%;
+    }
+  }
+
+  .h1_svgs {
+    @include tablet() {
+      height: 17vw;
+      &:only-of-type {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.hero_img {
+  // HERO IMAGE
+  position: absolute;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero_content {
+  // HERO CONTENT
+  grid-column: span 12;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.social_container {
+  // SOCIAL SVGS CONTAINER
+  align-self: end;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color: white;
+}
+
+.social_svgs {
+  // SOCIAL SVGS
+  width: 30px;
+  @include tablet() {
+    width: 40px;
+  }
+}
+
+.about {
+  position: sticky;
+  // ABOUT SECTION
+  padding: $section-pad;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  /* @link https://utopia.fyi/clamp/calculator?a=320,1440,36—40 */
+  gap: clamp(2.25rem, 2.1786rem + 0.3571vw, 2.5rem) 0;
+  @include desktop() {
+    gap: 0 clamp(2.25rem, 2.1786rem + 0.3571vw, 2.5rem);
+  }
+}
+
+.about_content {
+  // ABOUT CONTENT
+  grid-column: span 12;
+  @include desktop() {
+    grid-column: 7 / 13;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}

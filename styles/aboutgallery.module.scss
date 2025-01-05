@@ -1,0 +1,66 @@
+@use "mixins" as *;
+
+/* @link https://utopia.fyi/clamp/calculator?a=320,1440,27—30 */
+$section-pad: clamp(1.6875rem, 1.6339rem + 0.2679vw, 1.875rem);
+
+.about_gallery {
+  // ABOUT GALLERY
+  align-self: end;
+  grid-column: span 12;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  gap: 10px;
+  height: 90vh;
+  @include tablet() {
+    flex-direction: row-reverse;
+  }
+  @include desktop() {
+    grid-column: 1 / 6;
+    grid-row: 1;
+  }
+}
+
+.gallery_imgs {
+  // ABOUT GALLERY
+  max-width: 500px;
+  height: 150%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0 100px;
+  @include tablet() {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.current_img {
+  position: absolute;
+  transition: opacity 0.2s ease;
+}
+
+.gallery_btns {
+  margin-top: 20px;
+  overflow: hidden;
+  display: flex;
+  gap: 10px;
+  @include tablet() {
+    flex-direction: column;
+  }
+  @include desktop() {
+    justify-content: flex-end;
+  }
+}
+
+.gallery_btn {
+  border-radius: 40px 0;
+  overflow: hidden;
+}
+
+.current_btn_img {
+  width: 5rem;
+  height: 10rem;
+  @include desktop() {
+    height: 7rem;
+  }
+}

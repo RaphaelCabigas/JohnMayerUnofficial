@@ -1,0 +1,119 @@
+@use "mixins" as *;
+
+/* @link https://utopia.fyi/clamp/calculator?a=320,1440,27—30 */
+$section-pad: clamp(1.6875rem, 1.6339rem + 0.2679vw, 1.875rem);
+
+header {
+  width: 100%;
+  padding-block: 10px;
+  padding-inline: clamp(1.6875rem, 1.6339rem + 0.2679vw, 1.875rem);
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  // background-image: radial-gradient(rgb(15, 17, 21, 30%) 1px, transparent 1px);
+  // background-size: 10px 10px;
+  // backdrop-filter: blur(3px);
+  z-index: 9999;
+  mix-blend-mode: difference;
+}
+.logo,
+.main-nav,
+.account,
+.main-btn {
+  color: white;
+}
+.logo {
+  z-index: 1;
+}
+
+.main-nav-container {
+  display: none;
+  visibility: hidden;
+  @include tablet() {
+    display: block;
+    visibility: visible;
+  }
+  @include desktop() {
+    width: 60% !important;
+  }
+}
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-direction: row;
+  font-weight: 800;
+  font-size: 1.5rem;
+  margin-top: 0;
+  @include desktop() {
+    justify-content: space-between;
+  }
+}
+.logo {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.main-nav-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  z-index: 0;
+  svg {
+    width: 30px;
+    height: 30px;
+  }
+  @include tablet() {
+    li:last-child {
+      display: none;
+    }
+  }
+}
+
+.main-btn {
+  font-family: "Robson", sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+.mobile-nav-container {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  background-color: black;
+  overflow: hidden;
+  @include tablet() {
+    visibility: hidden;
+  }
+}
+
+.mobile-nav {
+  color: white;
+  inset: 0;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  font-size: 4rem;
+  font-family: "Robson", sans-serif;
+  font-weight: 900;
+  margin-top: 80px;
+}
+
+.account {
+  position: relative;
+}
+
+.active-account {
+  position: absolute;
+  right: -3px;
+  top: -5px;
+  height: 15px;
+  width: 15px;
+  border-radius: 100%;
+  background-color: green;
+}

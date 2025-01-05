@@ -1,0 +1,19 @@
+.dashboard_container {
+  padding: clamp(1.6875rem, 1.6339rem + 0.2679vw, 1.875rem);
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.user_details {
+  font-weight: 100;
+  font-family: "Satoshi", sans-serif;
+}
+
+.logout {
+  align-self: end;
+  font-weight: 500;
+  font-family: "Robson", sans-serif;
+  font-size: 10rem;
+}
