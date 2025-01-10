@@ -16,6 +16,10 @@ $section-pad: clamp(1.6875rem, 1.6339rem + 0.2679vw, 1.875rem);
   position: sticky;
   top: 0;
   background-color: transparent;
+  pointer-events: none;
+  * {
+    pointer-events: auto;
+  }
 }
 
 .h1_container {
@@ -70,7 +74,7 @@ span {
   justify-content: space-between;
 }
 
-.social_container {
+.hero_social {
   // SOCIAL SVGS CONTAINER
   align-self: end;
   display: flex;
@@ -109,5 +113,21 @@ span {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  }
+}
+
+.discography {
+  position: sticky;
+  color: white;
+  background-color: black;
+  overflow: hidden;
+}
+
+.disco_img {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  img {
+    object-fit: contain;
   }
 }

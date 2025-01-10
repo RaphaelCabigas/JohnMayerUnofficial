@@ -1,0 +1,371 @@
+{
+  "liveAlbums": [
+    {
+      "id": "any-given-thursday",
+      "src": "agt",
+      "alt": "Any Given Thursday",
+      "trackCount": 15,
+      "releaseDate": "February 11 2003",
+      "tracks": [
+            {"number": 1,"title": "3x5", "length": "8:05"},
+            { "number": 2, "title": "No Such Thing", "length": "4:46"},
+            { "number": 3, "title": "Back to You", "length": "4:36"},
+            { "number": 4, "title": "City Love", "length": "5:11"},
+            { "number": 5, "title": "Something's Missing", "length": "6:47"},
+            { "number": 6, "title": "Man on the Side (Medley) / Lenny (Stevie Ray Vaughan)", "length": "8:46"},
+            { "number": 7, "title": "Message in a Bottle (The Police)", "length": "5:06"},
+            { "number": 8, "title": "Love Song for No One (Cook, Mayer)", "length": "3:35"},
+            { "number": 9, "title": "Why Georgia", "length": "8:24" },
+            { "number": 10, "title": "Your Body Is a Wonderland", "length": "6:05"},
+            { "number": 11, "title": "My Stupid Mouth", "length": "5:02" },
+            { "number": 12, "title": "Covered in Rain", "length": "10:25" },
+            { "number": 13, "title": "83 (Medley) Girls Just Want to Have Fun  (Robert Hazard) / Let's Hear It for the Boy (Tom Snow, Dean Pitchford)", "length": "7:29" },
+            { "number": 14, "title": "Comfortable (Cook, Mayer)", "length": "7:37" },
+            { "number": 15, "title": "Neon (Cook, Mayer)", "length": "10:22" }
+      ],     
+      "description": "Any Given Thursday is a live CD/DVD by John Mayer, recorded on September 12, 2002, at the Oak Mountain Amphitheater in Birmingham, Alabama, during the Room for Squares tour. The album peaked at #17 on the Billboard 200 chart and features mostly songs from Room for Squares, along with several covers, including 'Lenny' by Stevie Ray Vaughan and 'Message in a Bottle' by The Police. Covers have become a regular feature in Mayer's live shows."
+    },
+    {
+      "id": "try",
+      "src": "try",
+      "alt": "Try!",
+      "trackCount": 11,
+      "releaseDate": "July 01 2008",
+      "tracks": [
+        { "number": 1, "title": "Who Did You Think I Was", "length": "3:09" },
+        { "number": 2, "title": "Good Love Is on the Way", "writer": "Mayer, Steve Jordan, Pino Palladino", "length": "4:50" },
+        { "number": 3, "title": "Wait Until Tomorrow (The Jimi Hendrix Experience cover)","length": "4:14" },
+        { "number": 4, "title": "Gravity", "length": "5:49" },
+        { "number": 5, "title": "Vultures", "writer": "Mayer, Steve Jordan, Pino Palladino", "length": "5:19" },
+        { "number": 6, "title": "Out of My Mind", "length": "7:39" },
+        { "number": 7, "title": "Another Kind of Green", "length": "4:39" },
+        { "number": 8, "title": "I Got a Woman (Ray Charles, Renald Richard cover)", "length": "7:40" },
+        { "number": 9, "title": "Something's Missing", "length": "6:56" },
+        { "number": 10, "title": "Daughters", "length": "6:14" },
+        { "number": 11, "title": "Try", "writer": "Mayer, Steve Jordan, Pino Palladino", "length": "6:52" }
+      ],  
+      "description": "Try! is the debut live album by the John Mayer Trio, recorded at the House of Blues in Chicago and released on November 22, 2005. It was nominated for Best Rock Album at the 49th Annual Grammy Awards, with album artwork designed by Seattle's Ames Bros."
+
+    },
+    {
+      "id": "where-the-light-is",
+      "src": "wtli",
+      "alt": "Where the Light Is",
+      "trackCount": 10,
+      "releaseDate": "July 01 2008",
+        "sets": [
+          {
+            "setName": "Acoustic Set",
+            "tracks": [
+              {
+                "number": 1,
+                "title": "Neon",
+                "length": "5:55"
+              },
+              {
+                "number": 2,
+                "title": "Stop This Train",
+                "length": "5:00"
+              },
+              {
+                "number": 3,
+                "title": "In Your Atmosphere (LA Song)",
+                "length": "5:45"
+              },
+              {
+                "number": 4,
+                "title": "Daughters",
+                "length": "5:04"
+              },
+              {
+                "number": 5,
+                "title": "Free Fallin' (Tom Petty)",
+                "length": "4:23"
+              }
+            ]            
+          },
+          {
+            "setName": "Trio Set",
+            "tracks": [
+              {
+                "number": 6,
+                "title": "Everyday I Have the Blues",
+                "length": "4:14"
+              },
+              {
+                "number": 7,
+                "title": "Wait Until Tomorrow (The Jimi Hendrix Experience cover)",
+                "length": "4:19"
+              },
+              {
+                "number": 8,
+                "title": "Who Did You Think I Was",
+                "length": "4:23"
+              },
+              {
+                "number": 9,
+                "title": "Come When I Call",
+                "length": "3:23"
+              },
+              {
+                "number": 10,
+                "title": "Good Love Is on the Way",
+                "length": "4:18"
+              },
+              {
+                "number": 11,
+                "title": "Out of My Mind",
+                "length": "10:10"
+              },
+              {
+                "number": 12,
+                "title": "Vultures",
+                "length": "5:19"
+              },
+              {
+                "number": 13,
+                "title": "Bold as Love (The Jimi Hendrix Experience cover)",
+                "length": "8:38"
+              }
+            ]
+          },
+          {
+            "setName": "Band Set",
+            "tracks": [
+              {
+                "number": 1,
+                "title": "Waiting on the World to Change",
+                "length": "3:50"
+              },
+              {
+                "number": 2,
+                "title": "Slow Dancing in a Burning Room",
+                "length": "5:19"
+              },
+              {
+                "number": 3,
+                "title": "Why Georgia",
+                "length": "4:27"
+              },
+              {
+                "number": 4,
+                "title": "The Heart of Life / In Repair",
+                "length": "3:40"
+              },
+              {
+                "number": 5,
+                "title": "I Don't Need No Doctor (Ray Charles cover)",
+                "length": "6:02"
+              },
+              {
+                "number": 6,
+                "title": "I've Got Dreams to Remember (Otis Redding cover) / Gravity",
+                "length": "9:41"
+              },
+              {
+                "number": 7,
+                "title": "I Don't Trust Myself (With Loving You)",
+                "length": "8:44"
+              },
+              {
+                "number": 8,
+                "title": "Belief",
+                "length": "6:03"
+              },
+              {
+                "number": 9,
+                "title": "I'm Gonna Find Another You",
+                "length": "5:40"
+              }
+            ]
+          }
+        ],        
+      "description": "Where the Light Is: John Mayer Live in Los Angeles is a live album and concert film by John Mayer, released on July 1, 2008. It captures his performance at the Nokia Theatre in Los Angeles on December 8, 2007, during the promotional tour for his 2006 album Continuum. The concert features three distinct sets: an acoustic performance with Mayer and his band’s guitarists, a set with the John Mayer Trio, and a final set with his regular touring band.\n\nThe title comes from the song \"Gravity,\" which was a single from Continuum. The album was released in multiple formats, including CD, LP, digital download, DVD, and Blu-ray, with bonus content featuring backstage footage and Mayer playing outside on Mulholland Drive.\n\nMayer's acoustic cover of \"Free Fallin'\" was critically acclaimed and released as a single. However, two songs, \"No Such Thing\" and \"Bigger Than My Body,\" were performed but not included in the final release. \"No Such Thing\" was omitted due to Mayer singing an incorrect lyric, and \"Bigger Than My Body\" was likely left out because of a timing issue during the performance."
+    }
+  ],
+    "studioAlbums": [
+      {
+        "id": "room-for-squares",
+        "src": "rfs",
+        "alt": "Room for Squares",
+        "trackCount": 13,
+        "releaseDate": "June 05 2001",
+        "tracks":[
+          { "number": 1, "title": "No Such Thing", "writer": "Mayer, Clay Cook", "length": "3:51" },
+          { "number": 2, "title": "Why Georgia", "length": "4:28" },
+          { "number": 3, "title": "My Stupid Mouth", "length": "3:45" },
+          { "number": 4, "title": "Your Body Is a Wonderland", "length": "4:09" },
+          { "number": 5, "title": "Neon", "writer": "Mayer, Clay Cook", "length": "4:22" },
+          { "number": 6, "title": "City Love", "length": "4:00" },
+          { "number": 7, "title": "83", "length": "4:50" },
+          { "number": 8, "title": "3×5", "length": "4:50" },
+          { "number": 9, "title": "Love Song for No One", "writer": "Mayer, Clay Cook", "length": "3:21" },
+          { "number": 10, "title": "Back to You", "length": "4:01" },
+          { "number": 11, "title": "Great Indoors", "length": "3:36" },
+          { "number": 12, "title": "Not Myself", "length": "3:40" },
+          { "number": 13, "title": "St. Patrick's Day", "length": "5:21" }        
+        ],
+        "description": "John Mayer's debut studio album, released in 2001 and re-released later that year. It reached number 8 on the US Billboard 200 and received positive reviews, earning Mayer a Grammy Award for Best Male Pop Vocal Performance for the hit \"Your Body Is a Wonderland.\" The album is Mayer's best-seller, with over 4.4 million copies sold in the US by 2014.",
+        "background": "Room for Squares is John Mayer's debut studio album, named as a reference to Hank Mobley's No Room for Squares. The album features songs primarily written by Mayer, with three tracks co-written with Clay Cook. Some of these songs, including \"No Such Thing\", \"Neon\", and \"Love Song for No One\", originally appeared on Mayer's 1999 EP Inside Wants Out. The album's lyrics are deeply influenced by Mayer's personal experiences. Mayer's reputation grew through consistent performances, especially at Eddie's Attic in Atlanta. An acquaintance, a lawyer, sent Mayer's EP to Aware Records, leading to Mayer's inclusion in Aware Festival concerts and compilations. In early 2001, Aware released Room for Squares as an internet-only album. In September 2001, Columbia Records signed a deal with Aware and remixed and re-released the album with updated artwork and an additional track, \"3x5\". Despite initial obscurity, the album gained popularity through word of mouth and Mayer's tours. By March 2002, it reached number one on the Billboard Heatseekers chart. Several singles, including \"No Such Thing\", \"Your Body Is a Wonderland\", and \"Why Georgia\" helped propel the album's success, making it a well-known debut."
+      },
+      {
+        "id": "heavier-things",
+        "src": "ht",
+        "alt": "Heavier Things",
+        "trackCount": 10,
+        "releaseDate": "September 09 2003",
+        "tracks": [
+          { "number": 1, "title": "Clarity", "length": "4:28" },
+          { "number": 2, "title": "Bigger Than My Body", "length": "4:26" },
+          { "number": 3, "title": "Something's Missing", "length": "5:04" },
+          { "number": 4, "title": "New Deep", "length": "4:07" },
+          { "number": 5, "title": "Come Back to Bed", "length": "5:23" },
+          { "number": 6, "title": "Home Life", "writer": "Mayer, David LaBruyere", "length": "4:14" },
+          { "number": 7, "title": "Split Screen Sadness", "length": "5:06" },
+          { "number": 8, "title": "Daughters", "length": "3:58" },
+          { "number": 9, "title": "Only Heart", "length": "3:52" },
+          { "number": 10, "title": "Wheel", "length": "5:33" }
+        ],        
+        "description": "John Mayer's second studio album, released on September 9, 2003, by Aware and Columbia Records. The album debuted at #1 on the US Billboard 200, selling over 317,000 copies in its first week. While some critics pointed out flaws in Mayer's songwriting, the album received mostly positive reviews.",        
+        "background": "Mayer felt he could be more relaxed and focused on his art while making Heavier Things. With Jack Joseph Puig as producer, loops and horns were more prominently featured. Mayer took greater control of the creative side with this album; much of it was recorded in his New York City apartment. He also got final approval on all radio edits. Mayer explained that he did not want a 'big and bold' title for the record and expressed that the name Heavier Things is 'what it is' due to its 'insignificance'. He further said that he likes the word 'things' due to finding it 'nondescript and dumb, [...] kind of blunt'. Columbia Records used a conservative marketing campaign to promote the album. Columbia Records Group president Will Botwin says, 'We think we're being smart. It's a long-term project. We understand what we're creating is a career. Effectively, that's the message: Keep the hype at bay.' In keeping with that gameplan, the album's first single, 'Bigger Than My Body,' only went to radio a few weeks before the album's release; promotional broadcasts of the album were limited to MTV.com and Mayer's official site, both of whom began streaming the complete album the September 2 before its release. Scheduled television appearances included Saturday Night Live on October 4 and several late shows. Columbia Records thought it was important to put Mayer in talk show-type scenarios before the album release to help bring focus to his art and to his singer/songwriter career, and to steer away from the fame and celebrity hype."
+        },  
+        {
+        "id": "continuum",
+        "src": "c",
+        "alt": "Continuum",
+        "trackCount": 13,
+        "releaseDate": "September 12 2006",
+        "tracks": [
+          { "number": 1, "title": "Waiting on the World to Change", "length": "3:21" },
+          { "number": 2, "title": "I Don't Trust Myself (With Loving You)", "length": "4:52" },
+          { "number": 3, "title": "Belief", "length": "4:02" },
+          { "number": 4, "title": "Gravity", "length": "4:05" },
+          { "number": 5, "title": "The Heart of Life", "length": "3:19" },
+          { "number": 6, "title": "Vultures", "writer": "Mayer, Steve Jordan, Pino Palladino", "length": "4:11" },
+          { "number": 7, "title": "Stop This Train", "length": "4:45" },
+          { "number": 8, "title": "Slow Dancing in a Burning Room", "length": "4:02" },
+          { "number": 9, "title": "Bold as Love (Jimi Hendrix Cover)", "length": "4:18" },
+          { "number": 10, "title": "Dreaming with a Broken Heart", "length": "4:07" },
+          { "number": 11, "title": "In Repair", "writer": "Mayer, Charlie Hunter", "length": "6:09" },
+          { "number": 12, "title": "I'm Gonna Find Another You", "length": "2:43" },
+          { "number": 13, "title": "Say", "length": "3:49"}
+        ],
+        "description": "Continuum is John Mayer's third studio album, released on September 12, 2006. It was produced by Steve Jordan and features a blend of blues and soul influences, marking a shift from Mayer's previous pop rock style. Bassist Pino Palladino joined Mayer, with whom he had previously toured as the John Mayer Trio. The album debuted at number 2 on the US Billboard 200, selling over 300,000 copies in its first week and more than 5 million worldwide. It received critical acclaim, winning Grammy Awards for Best Pop Vocal Album and Best Male Pop Vocal Performance. Rolling Stone ranked it among the top albums of 2006 and later listed it at number 486 in their 2020 list of the 500 Greatest Albums of All Time.",
+        "background": "Mayer decided to name the album 'Continuum' over a year before its release, inspired by his obsession with time and a desire to understand where he stands in the continuum of life. He confirmed the title in his Esquire column. The album features mostly new songs, though 'Gravity' and 'Vultures' are live versions from the John Mayer Trio's *Try!*. It also includes a Jimi Hendrix cover of 'Bold as Love,' Mayer’s first studio recording of a Hendrix song, and a collaboration with 8-string guitarist Charlie Hunter on 'In Repair.' The song 'Stop This Train' was written during a period of personal challenge while Mayer was suffering from double kidney stones and living in a hotel."
+      },
+      {
+        "id": "battle-studies",
+        "src": "bs",
+        "alt": "Battle Studies",
+        "trackCount": 12,
+        "releaseDate": "November 17 2009",
+        "tracks": [
+          { "number": 1, "title": "Heartbreak Warfare", "length": "4:30" },
+          { "number": 2, "title": "All We Ever Do Is Say Goodbye", "length": "4:35" },
+          { "number": 3, "title": "Half of My Heart ft. Taylor Swift", "length": "4:10" },
+          { "number": 4, "title": "Who Says", "length": "2:56" },
+          { "number": 5, "title": "Perfectly Lonely", "length": "4:28" },
+          { "number": 6, "title": "Assassin", "length": "5:14" },
+          { "number": 7, "title": "Crossroads (Robert Johnson cover)", "length": "2:29" },
+          { "number": 8, "title": "War of My Life", "length": "4:15" },
+          { "number": 9, "title": "Edge of Desire", "length": "5:32" },
+          { "number": 10, "title": "Do You Know Me", "length": "2:30" },
+          { "number": 11, "title": "Friends, Lovers or Nothing", "length": "5:59" },
+          { "number" : 12, "title": "I'm On Fire (Bruce Springsteen cover)","length": "2:52"}
+        ],
+        "description": "John Mayer's fourth studio album, released on November 17, 2009, by Columbia Records. The album was produced by Mayer and Steve Jordan and recorded between February and August 2009 at various studios, including Battle Studies recording studio in Calabasas, California, Capitol Studios in Hollywood, and The Village in West Los Angeles. It debuted at number one on the US Billboard 200, selling over 286,000 copies in its first week. The album received positive reviews and achieved platinum status, having sold over 880,000 copies in the United States. It produced two charting singles.",
+        "background": "After the success of Continuum, Mayer felt intimidated but motivated to create new music. He was liberated by the realization that his next album wouldn't be like Continuum. The album was leaked before its official release, but Mayer allowed fans to download it with the condition they register their copy. Mayer's Battle Studies World Tour began on November 5, 2009, in Sydney and ended on October 1, 2010, in Manila."
+      },
+      {
+        "id": "born-and-raised",
+        "src": "bar",
+        "alt": "Born and Raised",
+        "trackCount": 13,
+        "releaseDate": "May 22 2012",
+        "tracks" :[
+          { "number": 1, "title": "Queen of California", "length": "4:10" },
+          { "number": 2, "title": "The Age of Worry", "length": "2:38" },
+          { "number": 3, "title": "Shadow Days", "length": "3:53" },
+          { "number": 4, "title": "Speak for Me", "length": "3:45" },
+          { "number": 5, "title": "Something Like Olivia", "length": "3:01" },
+          { "number": 6, "title": "Born and Raised", "length": "4:48" },
+          { "number": 7, "title": "If I Ever Get Around to Living", "length": "5:22" },
+          { "number": 8, "title": "Love Is a Verb", "length": "2:24" },
+          { "number": 9, "title": "Walt Grace's Submarine Test, January 1967", "length": "5:08" },
+          { "number": 10, "title": "Whiskey, Whiskey, Whiskey", "length": "4:39" },
+          { "number": 11, "title": "A Face to Call Home", "length": "4:45" },
+          { "number": 12, "title": "Born and Raised (Reprise)", "length": "2:01" },
+          { "number": 13, "title": "Fool to Love You", "length": "2:16"}
+        ]        
+        ,
+        "description": "John Mayer's fifth studio album, released on May 22, 2012, by Columbia Records. It marked yet another change in Mayer's musical style, incorporating elements of folk and Americana, as well as influences from Bob Dylan, Neil Young, David Crosby, Stephen Stills, and Graham Nash. Its cover, as well as that of the single 'Queen of California', was designed by David Adrian Smith. Born and Raised received generally positive reviews from critics, who praised Mayer's technical skills as well as Don Was' production work. The first single 'Shadow Days' was released on Mayer's blog on February 27, 2012, and was made available for purchase as a digital download on March 6, 2012. The second single 'Queen of California' impacted Hot AC radio on August 13, 2012, and the third single 'Something Like Olivia' impacted Triple A radio on November 5, 2012.",
+        "background": "Mayer has stated that he began to gravitate towards new 'musical ideals' during the Winter leg of the Battle Studies World Tour, and he credits listening to records by Bob Dylan and Crosby, Stills, Nash & Young (namely, the Neil Young album After the Gold Rush), as well as other Americana, as influential for this. He has expressed minor frustration at not being able to begin new musical pursuits as soon as he would have liked, due to commitments to complete the touring for Battle Studies. Upon finishing the tour, and experiencing a backlash for controversial comments made in a Playboy interview, Mayer decided to step away from the media and out of the public eye for a while. Early reports indicated that the follow-up to Battle Studies would be called Born and Raised and would be released in October 2011. On September 16, 2011, Mayer posted on his blog that his new record, Born and Raised, was being delayed due to granulomas discovered in his throat. The granulomas were found next to the vocal chords and were treatable. Mayer described this as a 'temporary setback' and that recording and mixing of Born and Raised was entirely finished except for a few remaining vocal tracks. He expected the album to be out in early 2012. He told, 'I did a lot of therapy, like anti-acid reflux, and it didn’t work, then I went on vocal rest. No alcohol. No spicy food. No talking. Most of September I wasn’t talking at all. I’d have a Bluetooth keyboard, and someone would have an iPad to read what I type. I had to point to menus at restaurants. People look at me like I’m crazy.'" 
+      },
+      {
+        "id": "paradise-valley",
+        "src": "pv",
+        "alt": "Paradise Valley",
+        "trackCount": 11,
+        "releaseDate": "August 20 2013",
+        "tracks" :[
+          { "number": 1, "title": "Wildfire", "length": "4:15" },
+          { "number": 2, "title": "Dear Marie", "length": "3:44" },
+          { "number": 3, "title": "Waitin' On the Day", "length": "4:35" },
+          { "number": 4, "title": "Paper Doll", "length": "4:19" },
+          { "number": 5, "title": "Call Me the Breeze (J. J. Cale cover)", "length": "3:27" },
+          { "number": 6, "title": "Who You Love ft. Katy Perry", "length": "4:12" },
+          { "number": 7, "title": "I Will Be Found (Lost at Sea)", "length": "4:03" },
+          { "number": 8, "title": "Wildfire (Reprise) ft. Frank Ocean", "length": "1:28" },
+          { "number": 9, "title": "You're No One 'Til Someone Lets You Down", "length": "2:48" },
+          { "number": 10, "title": "Badge and Gun", "length": "3:15" },
+          { "number": 11, "title": "On the Way Home", "length": "3:59" }
+        ],
+        "description": "John Mayer's sixth studio album, released on August 20, 2013, by Columbia Records, is musically similar to his previous album but includes more electric guitar instrumentation. The title refers to his home in Montana's Paradise Valley. Singles include 'Paper Doll', 'Wildfire', and 'Who You Love'."
+      },
+      {
+        "id": "the-search-for-everything",
+        "src": "tsfe",
+        "alt": "The Search for Everything",
+        "trackCount": 12,
+        "releaseDate": "April 14 2017",
+        "tracks": [
+          { "number": 1, "title": "Still Feel Like Your Man", "length": "3:56" },
+          { "number": 2, "title": "Emoji of a Wave", "length": "3:59" },
+          { "number": 3, "title": "Helpless", "length": "4:09" },
+          { "number": 4, "title": "Love on the Weekend", "length": "3:31" },
+          { "number": 5, "title": "In the Blood", "length": "4:05" },
+          { "number": 6, "title": "Changing", "length": "3:33" },
+          { "number": 7, "title": "Theme from \"The Search for Everything\"", "length": "1:54" },
+          { "number": 8, "title": "Moving On and Getting Over", "length": "4:21" },
+          { "number": 9, "title": "Never on the Day You Leave", "length": "3:44" },
+          { "number": 10, "title": "Rosie", "length": "4:03" },
+          { "number": 11, "title": "Roll It on Home", "length": "3:25" },
+          { "number": 12, "title": "You're Gonna Live Forever in Me", "length": "3:09" }
+        ],        
+        "description": "John Mayer's seventh studio album, released on April 14, 2017, by Columbia Records, is a concept album that explores the emotional journey of a break-up, beginning with the break-up and concluding with the girl getting married.",
+        "background": "The Search for Everything: Wave One marks John Mayer's first release after a four-year break following his 2013 album Paradise Valley. During this period, he toured with Dead & Company, the rock group formed by the remaining members of The Grateful Dead. In January 2017, Mayer shared that the album would be released in segments, with each wave consisting of four songs due to the large number of tracks. Following Wave One, Wave Two was released as a follow-up EP, both of which lead up to the full release of his seventh studio album The Search for Everything on April 14, 2017."
+      },
+      {
+        "id": "sob-rock",
+        "src": "sr",
+        "alt": "Sob Rock",
+        "trackCount": 10,
+        "tracks" : [
+          {"number" : 1, "title": "Last Train Home", "length": "3:07"},
+          {"number" : 2,"title": "Shouldn't Matter but It Does", "length": "3:56"},
+          {"number" : 3,"title": "New Light", "length": "3:37"},
+          {"number" : 4,"title": "Why You No Love Me", "length": "4:15"},
+          {"number" : 5,"title": "Wild Blue", "length": "4:12"},
+          {"number" : 6,"title": "Shot in the Dark", "length": "4:09"},
+          {"number" : 7,"title": "I Guess I Just Feel Like", "length": "4:46"},
+          {"number" : 8,"title": "Til the Right One Comes", "length": "3:41"},
+          {"number" : 9,"title": "Carry Me Away", "length": "2:39"},
+          {"number" : 10,"title": "All I Want Is to Be with You", "length": "4:04"}
+        ],
+        "releaseDate": "July 16 2021",
+        "description": "John Mayer's eighth studio album, Sob Rock, was released on July 16, 2021, by Columbia Records. The album includes the single 'New Light' (2018), along with his 2019 singles 'I Guess I Just Feel Like' and 'Carry Me Away.' The lead single, 'Last Train Home,' was released in June 2021 and features Maren Morris. Mayer toured the U.S. with Dead & Company in 2021 and began a solo tour in 2022 to support the album.",
+        "background": "Mayer created this album during the COVID-19 pandemic, with most of the songs written after March 2020, when touring was halted. The album pays homage to '80s music and was intended to confuse listeners and 'implant false memories.' Three singles from 2018-2019 ('New Light', 'I Guess I Just Feel Like', and 'Carry Me Away') were included on the album, despite not being planned initially. The album was delayed from mid-April 2021 to July 16, 2021. It was recorded between late 2017 and early 2021. 'Last Train Home' was released as a single on June 4, 2021, with clips shared on Mayer's TikTok in March 2021. The album was also made available in physical formats, including vinyl and cassette editions."
+      }
+    ]
+  }
+  

@@ -28,7 +28,6 @@ $section-pad: clamp(1.6875rem, 1.6339rem + 0.2679vw, 1.875rem);
 
 html {
   scroll-behavior: smooth;
-  overflow-y: auto;
 }
 
 body {
@@ -60,8 +59,8 @@ h2 {
 }
 
 p {
-  font-size: 1.3rem;
-  line-height: 1.8;
+  font-size: clamp(1rem, 0.7444rem + 0.5618vw, 1.25rem);
+  line-height: 1.5;
   font-family: "Satoshi", sans-serif;
 }
 
@@ -74,9 +73,14 @@ a {
 
 input,
 textarea {
+  font-family: "Satoshi", sans-serif;
   width: 100%;
   padding: 8px;
   border: none;
+}
+
+label {
+  font-family: "Satoshi", sans-serif;
 }
 
 textarea {

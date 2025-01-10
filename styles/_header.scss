@@ -11,23 +11,18 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  // background-image: radial-gradient(rgb(15, 17, 21, 30%) 1px, transparent 1px);
-  // background-size: 10px 10px;
-  // backdrop-filter: blur(3px);
-  z-index: 9999;
+  z-index: 100;
   mix-blend-mode: difference;
 }
+
 .logo,
-.main-nav,
+.main_nav,
 .account,
-.main-btn {
+.main_btn {
   color: white;
 }
-.logo {
-  z-index: 1;
-}
 
-.main-nav-container {
+.main_nav_container {
   display: none;
   visibility: hidden;
   @include tablet() {
@@ -39,7 +34,7 @@ header {
   }
 }
 
-.main-nav {
+.main_nav {
   display: flex;
   justify-content: center;
   gap: 50px;
@@ -51,12 +46,17 @@ header {
     justify-content: space-between;
   }
 }
+
 .logo {
-  font-size: 3rem;
-  font-weight: 900;
+  height: 4rem;
+  width: 3.5rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-image: url(/svgs/logo.svg);
 }
 
-.main-nav-actions {
+.main_nav_actions {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -73,17 +73,20 @@ header {
   }
 }
 
-.main-btn {
+.main_btn {
   font-family: "Robson", sans-serif;
   font-weight: 900;
   font-size: 2rem;
 }
 
-.mobile-nav-container {
+.mobile_nav_container {
   position: fixed;
   z-index: 2;
   top: 0;
   right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: black;
   overflow: hidden;
   @include tablet() {
@@ -91,24 +94,27 @@ header {
   }
 }
 
-.mobile-nav {
+.mobile_nav {
   color: white;
   inset: 0;
-  padding: 30px;
   display: flex;
+  padding-left: 2vw;
   flex-direction: column;
   gap: 50px;
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: "Robson", sans-serif;
   font-weight: 900;
-  margin-top: 80px;
+  margin-top: 100px;
 }
 
 .account {
   position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.active-account {
+.active_account {
   position: absolute;
   right: -3px;
   top: -5px;

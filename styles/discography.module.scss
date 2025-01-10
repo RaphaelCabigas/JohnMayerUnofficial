@@ -1,0 +1,60 @@
+/* @link https://utopia.fyi/clamp/calculator?a=320,1440,27—30 */
+$section-pad: clamp(1.6875rem, 1.6339rem + 0.2679vw, 1.875rem);
+
+.discography {
+  padding: $section-pad;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.discography_content {
+  background-color: black;
+  color: white;
+}
+
+.h1_discography {
+  align-self: end;
+  object-fit: contain;
+  width: 100%;
+}
+
+.studioalbum_container {
+  background-color: black;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  place-items: center;
+  gap: 30px 0;
+}
+
+.livealbum_container {
+  background-color: black;
+}
+
+.album_btn {
+  object-fit: contain;
+  overflow: hidden;
+  position: relative;
+  height: 50px;
+  width: 50px;
+}
+
+.album_btn_content {
+  padding-block: 50px;
+
+  h3 {
+    font-size: 4rem;
+  }
+}
+
+.album_img {
+  width: auto;
+  height: auto;
+  min-width: 300px;
+  min-height: 600px;
+  pointer-events: visible;
+  transition: transform 0.5s ease;
+  &:hover {
+    transform: scale(1.2) rotateZ(-10deg);
+  }
+}

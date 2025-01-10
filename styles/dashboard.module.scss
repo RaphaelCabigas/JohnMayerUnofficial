@@ -1,19 +1,40 @@
+@use "mixins" as *;
+
 .dashboard_container {
-  padding: clamp(1.6875rem, 1.6339rem + 0.2679vw, 1.875rem);
-  padding-top: 100px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+  @include tablet() {
+    flex-direction: row;
+    text-align: left;
+    gap: 50px;
+  }
 }
 
 .user_details {
+  overflow-wrap: anywhere;
+  font-size: 1.5rem;
   font-weight: 100;
   font-family: "Satoshi", sans-serif;
 }
 
+.user_profile {
+  border-radius: 15px;
+  border: 4px solid black;
+  aspect-ratio: 1 / 1;
+  width: 150px;
+  position: relative;
+  overflow: hidden;
+}
+
 .logout {
-  align-self: end;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
   font-weight: 500;
   font-family: "Robson", sans-serif;
-  font-size: 10rem;
+  font-size: 5rem;
 }

@@ -1,18 +1,34 @@
 import { Schema, models, model } from "mongoose";
 
 const userSchema = new Schema({
+    // user's name as string and required
     name: {
         type: String,
         required: true,
     },
+    // user's email as string and required and unique
     email: {
         type: String,
         required: true,
         unique: true,
     },
+    // user's password as string  
+    // NOT required if is not authenticated by Open Authentication Providers 
+    // Required for original authentication through registration
     password: {
         type: String,
-        required: true,
+        required: function () {
+            // Only required if user is not logging in through the oauth provider
+            return !this.oauthProviders;
+        },
+    },
+    oauthProviders: {
+        // Array of OAuth providers as strings
+        type: [String],
+        // and only allow these two oauth providers Google, Github
+        enum: ["google", "github"],
+        // set a default of empty
+        default: null,
     }
 },
     // timestamps for when the user created an account

@@ -3,33 +3,42 @@ import User from "@/src/models/user";
 import { NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 
+// User registration/creation
 export async function POST(request) {
     try {
-        // connect to the database
         await connectDB();
-        // Request json data of user details
-        const { name, email, password } = await request.json();
+        // Get the user data from the request body
+        const { name, email, password, oauthProviders } = await request.json();
 
-        // Check the user model for any existing users
-        const userExists = await User.findOne({ email }).select("_id");
+        // Check if the user already exists with the same email
+        const userExists = await User.findOne({ email });
         if (userExists) {
-            return NextResponse.json({ message: "User already exists" }, { status: 400 });
+            // If user exists, return an error response
+            return NextResponse.json({ message: "Email is already in use." }, { status: 401 });
         }
 
-        // Encrypts the user's password
+        // Hash the user's password 10 times 
         const hashedPassword = await bcrypt.hash(password, 10);
-        // Otherwise return the user details and save it in the database
+
+        // Create a new user and save it in the database
         const newUser = new User({
             name,
             email,
             password: hashedPassword,
+            oauthProviders,
         });
-
         await newUser.save();
-        // Alert the user account created successfully
-        return NextResponse.json({ message: "User registered." }, { status: 201 });
+
+        // Return a success message with user name and email
+        return NextResponse.json({
+            message: "User registered successfully.", user: {
+                name: newUser.name,
+                email: newUser.email,
+            }
+        }, { status: 201 });
     } catch (error) {
-        // If there was an error in creating the account then alert the user server error
+        // return an error message
+        console.error("Error during registration");
         return NextResponse.json({ message: "An error occurred while registering the user." }, { status: 500 });
     }
 }
