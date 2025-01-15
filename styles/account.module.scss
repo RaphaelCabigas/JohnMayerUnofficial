@@ -22,8 +22,35 @@
   }
 
   h2 {
-    font-size: 3rem;
-    margin-bottom: 40px;
+    font-size: 1.5rem;
+    position: relative;
+    &::after {
+      content: "";
+      z-index: 1;
+      position: absolute;
+      display: block;
+      background-color: black;
+      height: 1px;
+      width: 45%;
+      margin-top: 8px;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      transform: translate(0%, 100%);
+    }
+    &::before {
+      content: "";
+      z-index: 1;
+      position: absolute;
+      display: block;
+      background-color: black;
+      height: 1px;
+      width: 45%;
+      margin-top: 8px;
+      top: 0;
+      bottom: 0;
+      transform: translate(0%, 100%);
+    }
   }
 
   label {
@@ -31,9 +58,8 @@
   }
 
   input {
-    font-size: 1.3rem;
+    font-size: 1rem;
     border-bottom: 1px solid black;
-    margin-bottom: 40px;
   }
 }
 
@@ -47,16 +73,30 @@
 }
 
 .form_link {
+  margin-top: 20px;
   display: inline;
   text-decoration: underline;
   font-family: "Satoshi", sans-serif;
+}
+
+.form_fields {
+  display: grid;
+  gap: 20px;
+}
+
+.form_content {
+  display: grid;
+  gap: 20px;
 }
 
 .form_button {
   padding: 15px;
   color: white;
   background-color: black;
-  margin-bottom: 40px;
+}
+
+.form_error {
+  color: rgb(255, 0, 0);
 }
 
 .form_options {
@@ -69,6 +109,9 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
+    &:disabled {
+      color: black;
+    }
     span {
       font-weight: 400;
     }

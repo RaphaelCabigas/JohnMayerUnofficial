@@ -1,9 +1,8 @@
 import dataAlbums from "@/src/albums.json";
-import S from "@/styles/album.module.scss";
-import testing from "@/public/images/home-hero.jpg";
-import Image from "next/image";
+import fs from "fs/promises";
+import path from "path";
 import { notFound } from "next/navigation";
-import Link from "next/link";
+import Album from "./album";
 
 // Code Ryan Guide for Dynamic Routes: https://youtu.be/ec3OEG8DXJM?si=S1gqrBFCLGTUERTH
 // This generates static pages for each album page using just one single page
@@ -15,6 +14,22 @@ export async function generateStaticParams() {
   const albums = [...liveAlbums, ...studioAlbums];
   // Map over all the albums and generate an object with each id as the key
   return albums.map((album) => ({ id: album.id }));
+}
+
+// https://github.com/vercel/next.js/discussions/34644
+// A function that gets all the album images from the corresponding folder through the path id
+export async function getAlbumImages(id) {
+  // joins that public folder with the corresponding id
+  const imageFolder = path.join(process.cwd(), "public", id);
+
+  try {
+    // Get all the images in the folder
+    const imageFiles = await fs.readdir(imageFolder);
+    // map every image within the folder
+    return imageFiles.map((file) => `/${id}/${file}`);
+  } catch (error) {
+    console.error("Image directory not found");
+  }
 }
 
 // https://nextjs.org/docs/app/api-reference/functions/generate-metadata
@@ -36,13 +51,13 @@ export async function generateMetadata({ params }) {
   return {
     title: album.alt,
     description: album.description,
-    image: `/images/${album.src}.jpg`,
   };
 }
 
-export default async function Album({ params }) {
+export default async function AlbumPage({ params }) {
   // https://nextjs.org/docs/messages/sync-dynamic-apis
   const { id } = await params;
+  const albumImages = await getAlbumImages(id);
   const { liveAlbums, studioAlbums } = dataAlbums;
   const albums = [...liveAlbums, ...studioAlbums];
   // find the album by id
@@ -66,88 +81,12 @@ export default async function Album({ params }) {
   const nextAlbum = albums[albumNumber + 1] || albums[0];
   return (
     <>
-      <section className={S.album}>
-        <h1>{album.alt}</h1>
-        <div className={S.album_details}>
-          <p>{album.trackCount} tracks</p>
-          <p>{album.releaseDate}</p>
-        </div>
-      </section>
-      <section className={S.album_description}>
-        <h2>Album Description</h2>
-        <p>{album.description}</p>
-      </section>
-      {/* If background paragraph is available */}
-      {album.background && (
-        <section className={S.album_background}>
-          <h2>Album Background</h2>
-          <p>{album.background}</p>
-        </section>
-      )}
-      {/* If tracks are available */}
-      {album.tracks && (
-        <section className={S.album_tracks}>
-          <h2>Track Listing</h2>
-          <ul className={S.tracks_container}>
-            {album.tracks &&
-              album.tracks.map((track) => (
-                <li key={track.number}>
-                  <span>{track.number}</span>
-                  <span>{track.title}</span>
-                  <span>{track.length}</span>
-                </li>
-              ))}
-          </ul>
-        </section>
-      )}
-      {/* If sets are available for the Where the Light Is Page */}
-      {album.sets && (
-        <section className={S.album_tracks}>
-          {album.sets.map((set, index) => (
-            <div key={index} className={S.tracks_container}>
-              <h2>{set.setName}</h2>
-              <ul className={S.track_order}>
-                {set.tracks.map((track) => (
-                  <li key={track.number} className={S.track_container}>
-                    <span>{track.number}</span>
-                    <span>
-                      {track.title}
-                      {track.writer && <span>track.writer</span>}
-                    </span>
-                    <span>{track.length}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </section>
-      )}
-      <div className={S.album_navigation}>
-        <Link href={`/discography/${prevAlbum.id}`}>
-          <div>
-            <p>Previous Album</p>
-            <p>{prevAlbum.alt}</p>
-          </div>
-          <Image
-            src={`/images/${prevAlbum.src}.jpg`}
-            alt={prevAlbum.alt}
-            width={50}
-            height={50}
-          />
-        </Link>
-        <Link href={`/discography/${nextAlbum.id}`}>
-          <div>
-            <p>Next Album</p>
-            <p>{nextAlbum.alt}</p>
-          </div>
-          <Image
-            src={`/images/${nextAlbum.src}.jpg`}
-            alt={nextAlbum.alt}
-            width={50}
-            height={50}
-          />
-        </Link>
-      </div>
+      <Album
+        album={album}
+        albumImages={albumImages}
+        prevAlbum={prevAlbum}
+        nextAlbum={nextAlbum}
+      />
     </>
   );
 }

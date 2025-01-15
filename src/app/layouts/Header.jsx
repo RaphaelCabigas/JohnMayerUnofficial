@@ -3,10 +3,8 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { FaUser } from "react-icons/fa";
-import Logo_SVG from "@/public/svgs/logo.svg";
 import { motion, useScroll, useMotionValueEvent } from "motion/react";
 import { useSession } from "next-auth/react";
-import Image from "next/image";
 
 export default function Header() {
   // useSession gets the user authentication info
@@ -19,10 +17,11 @@ export default function Header() {
   const [headerHidden, setHeaderHidden] = useState(false);
   // useMotionValueEvent listens to any changes in scrollY value and do the callback
   useMotionValueEvent(scrollY, "change", (latest) => {
+    if (menuHidden) return;
     // getPrevious returns the previous value of scrollY and if it doesn't return anything make it 0
     const previous = scrollY.getPrevious() ?? 0;
-    // if latest is greater than previous and greater than 100 set hidden to true else false to hide the header
-    setHeaderHidden(latest > previous);
+    // if latest is greater than previous and greater than 800 set hidden to true else false to hide the header
+    setHeaderHidden(latest > previous && latest > 800);
   });
 
   // Function to close the menu when clicking a link
@@ -31,7 +30,9 @@ export default function Header() {
   };
 
   useEffect(() => {
+    // Checks if the menu is hidden then set display scrollbar
     document.body.style.overflow = menuHidden ? "hidden" : "auto";
+    // Sets display scrollbar back to auto when menu is closed
     return () => (document.body.style.overflow = "auto");
   }, [menuHidden]);
 
@@ -76,6 +77,9 @@ export default function Header() {
           </ul>
         </nav>
         <ul className="main_nav_actions">
+          <li>
+            <button className="bgm_btn">music</button>
+          </li>
           <li>
             <Link
               href={isLoggedIn ? "/dashboard" : "/login"}

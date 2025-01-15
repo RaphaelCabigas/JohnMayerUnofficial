@@ -7,16 +7,18 @@
 }
 
 .home_link {
+  text-align: center;
+  font-family: "Robson", sans-serif;
   position: relative;
-  font-size: 10rem;
+  font-size: 40vw;
 }
 
-.home_txt {
-  font-family: "Robson", sans-serif;
-}
-.home_img {
-  pointer-events: auto;
+.notfound_heading {
   position: absolute;
+  pointer-events: none;
+  inset-inline: 0;
+  text-align: center;
+  bottom: 30px;
 }
 
 .music_link {

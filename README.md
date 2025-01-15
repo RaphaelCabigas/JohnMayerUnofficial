@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Web Development II
 
-## Getting Started
+**Raphael Chester Corpus Cabigas Creative Computing Year 2 2024-2025**
 
-First, run the development server:
+## Summative Assessment 2: Multi-Device / Single Page Application
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+You’re supposed to come up with a single page web application where you’d need to put together a responsive front-end using HTML/CSS together with a small back-end using Node.js framework. It could be anything from a storefront to an interactive experience, but make sure to run the idea through your tutor so it fits the template.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The application should work on a mobile as well as a desktop device. You are expected to have a sound understanding of what responsive design is all about, and it’s not just about visual beauty, but also interaction with users of the application. The application should be able to render static content, like stylesheets, images among others. Additionally, you would be required to implement one more thing, like a dynamic webpage, data to be pulled from a database, an API or a login system. Your work should be done using some of the recent techniques in web development.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+You will need to design, implement as well as document the application in intervals. In the documentation, you must describe the steps you took and the reasons for the changes made incorporating images or screenshots of the process where possible. Wireframes, test plans, feedback from colleagues and commits on Git Hub could be used as the evidence of the process.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Progamming Languages & Technologies Used
 
-## Learn More
+- **Javascript**:
+- **React**:
+- **Sass**:
+- **MongoDB**: Managing user registration and login.
+- **Next.js**:
+- **NextAuth.js**: Authentication and authorization
 
-To learn more about Next.js, take a look at the following resources:
+### Dependencies
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **bcrypt**: For hashing and comparing passwords.
+- **motion**: Animation Library for React.
+- \*_react-icons_: Icon Library for React.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Credits
 
-## Deploy on Vercel
+This project uses images, content, and data from the following platforms
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Discogs**: For albums and cover art, and information
+- **Wikipedia**: For general information and references.
+- **Flickr**: For images.
+<!-- - **Youtube**: For the unreleased John Mayer tracks. -->
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### DISCLAIMER
+
+This is an **unofficial** project related to **John Mayer**. The content and images related to John Mayer are used here **exclusively for educational purposes**. No commercial use is intended, and all rights to the original content belong to their respective owners.

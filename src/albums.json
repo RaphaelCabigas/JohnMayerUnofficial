@@ -4,6 +4,8 @@
       "id": "any-given-thursday",
       "src": "agt",
       "alt": "Any Given Thursday",
+      "desc": "agt_desc",
+      "vid": "agt_hero.mp4",
       "trackCount": 15,
       "releaseDate": "February 11 2003",
       "tracks": [
@@ -29,6 +31,8 @@
       "id": "try",
       "src": "try",
       "alt": "Try!",
+      "desc": "try_desc",
+      "vid": "try_hero.mp4",
       "trackCount": 11,
       "releaseDate": "July 01 2008",
       "tracks": [
@@ -51,6 +55,8 @@
       "id": "where-the-light-is",
       "src": "wtli",
       "alt": "Where the Light Is",
+      "desc": "wtli_desc",
+      "vid": "wtli_hero.mp4",
       "trackCount": 10,
       "releaseDate": "July 01 2008",
         "sets": [

@@ -1,3 +1,4 @@
+@use "mixins" as *;
 /* @link https://utopia.fyi/clamp/calculator?a=320,1440,27—30 */
 $section-pad: clamp(1.6875rem, 1.6339rem + 0.2679vw, 1.875rem);
 
@@ -6,52 +7,95 @@ $section-pad: clamp(1.6875rem, 1.6339rem + 0.2679vw, 1.875rem);
   height: 100vh;
   display: flex;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
 }
 
-.discography_content {
-  background-color: black;
-  color: white;
+.hero_img {
+  position: absolute;
+  object-fit: cover;
+  inset: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 0;
+  transform: scale(1.2);
+  filter: brightness(0.3) blur(1px);
 }
 
 .h1_discography {
-  align-self: end;
-  object-fit: contain;
+  height: fit-content;
   width: 100%;
+  display: flex;
+  align-self: end;
+  justify-content: center;
+  object-fit: contain;
+  position: relative;
+  z-index: 1;
 }
 
+.discography_content {
+  padding: $section-pad;
+  background-color: black;
+  color: white;
+}
 .studioalbum_container {
+  padding: 0;
   background-color: black;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
-  place-items: center;
+  align-items: center;
   gap: 30px 0;
+  grid-template-columns: 1fr;
+  @include tablet() {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+.album_item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
 }
 
 .livealbum_container {
+  padding: 0;
   background-color: black;
-}
-
-.album_btn {
-  object-fit: contain;
-  overflow: hidden;
-  position: relative;
-  height: 50px;
-  width: 50px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr;
+  @include tablet() {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
 }
 
 .album_btn_content {
-  padding-block: 50px;
-
+  height: fit-content;
+  display: grid;
+  align-items: start;
+  gap: 10px;
   h3 {
-    font-size: 4rem;
+    font-family: "Satoshi", sans-serif;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 1rem;
+  }
+}
+
+.album_btn {
+  overflow: hidden;
+  position: relative;
+  height: 30vw;
+  width: 30vw;
+  img {
+    width: auto;
+    height: auto;
+    object-fit: contain;
   }
 }
 
 .album_img {
-  width: auto;
-  height: auto;
-  min-width: 300px;
-  min-height: 600px;
   pointer-events: visible;
   transition: transform 0.5s ease;
   &:hover {

@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import S from "@/styles/account.module.scss";
-import testing from "@/public/images/home-hero.jpg";
+import Hero from "@/public/images/register-hero.jpg";
 import { useRouter } from "next/navigation";
 
 export default function RegisterPage() {
@@ -68,57 +68,66 @@ export default function RegisterPage() {
   return (
     <section className={S.form_container}>
       <Image
-        src={testing}
-        alt="John Mayer closed up shot black and white"
+        src={Hero}
+        alt="John Mayer black and white playing an acoustic guitar"
         className={S.form_img + " next_img"}
         draggable={false}
         priority={true}
       />
       <form onSubmit={handleSubmit} autoComplete="off" className={S.form_form}>
-        <h1>Create an Account</h1>
-        <div>
-          <label htmlFor="name">Full Name</label>
-          <input
-            placeholder="Full Name"
-            type="text"
-            name="name"
-            id="name"
-            autoComplete="off"
-          />
-        </div>
-        <div>
-          <label htmlFor="email">Email</label>
-          <input
-            placeholder="Your Email"
-            type="email"
-            name="email"
-            autoComplete="off"
-            id="email"
-          />
-        </div>
-        <div>
-          <label htmlFor="password">Password</label>
-          <input
-            placeholder="Your Password"
-            type="password"
-            name="password"
-            id="password"
-          />
-        </div>
-        <button type="submit" className={S.form_button} disabled={isLoading}>
-          {/* If registration is processing display the loading skeleton */}
-          {isLoading ? "Creating Account..." : "Create an Account"}
-        </button>
-        {/* If there's an error message display the error*/}
-        {error && <p className={S.form_error}>{error}</p>}
-        <div>
+        <h1>Welcome Aboard!</h1>
+        <p>Sign up to get started</p>
+        <div className={S.form_content}>
+          <div className={S.form_fields}>
+            <div>
+              <label htmlFor="name">Full Name</label>
+              <input
+                placeholder="Full Name"
+                type="text"
+                name="name"
+                id="name"
+                autoComplete="off"
+              />
+            </div>
+            <div>
+              <label htmlFor="email">Email</label>
+              <input
+                placeholder="Your Email"
+                type="email"
+                name="email"
+                autoComplete="off"
+                id="email"
+              />
+            </div>
+            <div>
+              <label htmlFor="password">Password</label>
+              <input
+                placeholder="Your Password"
+                type="password"
+                name="password"
+                id="password"
+              />
+            </div>
+            <button
+              type="submit"
+              className={S.form_button}
+              disabled={isLoading}
+            >
+              {/* If registration is processing display the loading skeleton */}
+              {isLoading ? "Creating Account..." : "Create an Account"}
+            </button>
+          </div>
+          {/* If there's an error message display the error*/}
+          {error && <p className={S.form_error}>{error}</p>}
           <h2>OR</h2>
-          <p>
-            Do you have an account?
-            <Link href="/login" className={S.form_link}>
-              Log In
-            </Link>
-          </p>
+          <div>
+            <p>
+              <span>Do you have an account? </span>
+              <Link href="/login" className={S.form_link}>
+                Log In
+              </Link>
+            </p>
+          </div>
         </div>
       </form>
     </section>

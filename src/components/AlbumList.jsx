@@ -19,7 +19,7 @@ export default function AlbumList({ container, albums }) {
                 loading="lazy"
               />
             </Link>
-            <div className="album_btn_content">
+            <div className={S.album_btn_content}>
               <h3>{album.alt}</h3>
               <p>Number of Tracks: {album.trackCount}</p>
               <p>Release Date: {album.releaseDate}</p>

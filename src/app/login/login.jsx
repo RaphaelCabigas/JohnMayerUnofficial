@@ -5,7 +5,7 @@ import { signIn } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
 import S from "@/styles/account.module.scss";
-import testing from "@/public/images/home-hero.jpg";
+import Hero from "@/public/images/login-hero.jpg";
 import { FaGithub } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { useRouter } from "next/navigation";
@@ -77,59 +77,67 @@ export default function LogIn() {
       <form onSubmit={handleSubmit} autoComplete="off" className={S.form_form}>
         <h1>Welcome Back!</h1>
         <p>Log In to your account</p>
-        <div>
-          <label htmlFor="email">Email</label>
-          <input
-            placeholder="Your Email"
-            type="email"
-            name="email"
-            id="email"
-            className={S.form_input}
-            autoComplete="off"
-          />
-        </div>
-        <div>
-          <label htmlFor="password">Password</label>
-          <input
-            placeholder="Your Password"
-            type="password"
-            name="password"
-            id="password"
-            autoComplete="off"
-          />
-        </div>
-        <button type="submit" className={S.form_button} disabled={isLoading}>
-          {isLoading ? "Logging in Account..." : "Log In"}
-        </button>
-        {error && <p className={S.form_error}>{error}</p>}
-        <div>
+        <div className={S.form_content}>
+          <div className={S.form_fields}>
+            <div>
+              <label htmlFor="email">Email</label>
+              <input
+                placeholder="Your Email"
+                type="email"
+                name="email"
+                id="email"
+                className={S.form_input}
+                autoComplete="off"
+              />
+            </div>
+            <div>
+              <label htmlFor="password">Password</label>
+              <input
+                placeholder="Your Password"
+                type="password"
+                name="password"
+                id="password"
+                autoComplete="off"
+              />
+            </div>
+            <button
+              type="submit"
+              className={S.form_button}
+              disabled={isLoading}
+            >
+              {isLoading ? "Logging in Account..." : "Log In"}
+            </button>
+            {error && <p className={S.form_error}>{error}</p>}
+          </div>
           <h2>OR</h2>
-          <div className={S.form_options}>
-            <button
-              onClick={() => handleAuthProvider("google")}
-              disabled={isGoogleLoading}
-            >
-              <FcGoogle />
-              <span>
-                {isGoogleLoading
-                  ? "Logging in Google..."
-                  : "Continue with Google"}
-              </span>
-            </button>
-            <button
-              onClick={() => handleAuthProvider("github")}
-              disabled={isGithubLoading}
-            >
-              <FaGithub />
-              <span>
-                {isGithubLoading
-                  ? "Logging in Github..."
-                  : "Continue with Github"}
-              </span>
-            </button>
+          <div>
+            <div className={S.form_options}>
+              <button
+                onClick={() => handleAuthProvider("google")}
+                disabled={isGoogleLoading}
+              >
+                <FcGoogle />
+                <span>
+                  {isGoogleLoading
+                    ? "Logging in Google..."
+                    : "Continue with Google"}
+                </span>
+              </button>
+              <button
+                onClick={() => handleAuthProvider("github")}
+                disabled={isGithubLoading}
+              >
+                <FaGithub />
+                <span>
+                  {isGithubLoading
+                    ? "Logging in Github..."
+                    : "Continue with Github"}
+                </span>
+              </button>
+            </div>
           </div>
           <p>
-            Don't have an account?
+            <span>Don't have an account? </span>
             <Link href="/register" className={S.form_link}>
               Create an Account
             </Link>
@@ -137,8 +145,8 @@ export default function LogIn() {
         </div>
       </form>
       <Image
-        src={testing}
-        alt="John Mayer closed up shot black and white"
+        src={Hero}
+        alt="Behind of John Mayer jumped in the air playing the guitar on stage"
         className={S.form_img + " next_img"}
         draggable={false}
         priority={true}

@@ -19,6 +19,7 @@ const userSchema = new Schema({
         type: String,
         required: function () {
             // Only required if user is not logging in through the oauth provider
+            // to allow oauthProviders to be included in the database
             return !this.oauthProviders;
         },
     },
