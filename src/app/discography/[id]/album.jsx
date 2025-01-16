@@ -33,6 +33,7 @@ export default function Album({ album, albumImages, prevAlbum, nextAlbum }) {
               width={600}
               height={600}
               draggable={false}
+              loading="lazy"
             />
           </div>
           <div className={S.album_desc_content}>
@@ -61,6 +62,7 @@ export default function Album({ album, albumImages, prevAlbum, nextAlbum }) {
                       fill={true}
                       draggable={false}
                       sizes="(max-width: 500px) 300px, 500px" // Define sizes based on screen width
+                      loading="lazy"
                     />
                   </div>
                 );
