@@ -55,22 +55,25 @@ export default function Header() {
         <nav className="main_nav_container">
           <ul className="main_nav">
             <li>
-              <Link href="/biography" onClick={handleLinkClick}>
-                BIOGRAPHY
-              </Link>
-            </li>
-            <li>
               <Link href="/discography" onClick={handleLinkClick}>
                 DISCOGRAPHY
               </Link>
             </li>
             <li>
-              <Link href="/" onClick={handleLinkClick}>
+              <a
+                href="https://www.ticketmaster.com/john-mayer-tickets/artist/770494"
+                target="_blank"
+                onClick={handleLinkClick}
+              >
                 TOUR
-              </Link>
+              </a>
             </li>
             <li>
-              <a href="https://johnmayerstore.com/" onClick={handleLinkClick}>
+              <a
+                href="https://johnmayerstore.com/"
+                target="_blank"
+                onClick={handleLinkClick}
+              >
                 STORE
               </a>
             </li>
@@ -141,12 +144,7 @@ export default function Header() {
         >
           <li>
             <Link href="/" onClick={handleLinkClick}>
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link href="/biography" onClick={handleLinkClick}>
-              BIOGRAPHY
+              HOME
             </Link>
           </li>
           <li>
@@ -155,9 +153,13 @@ export default function Header() {
             </Link>
           </li>
           <li>
-            <Link href="/" onClick={handleLinkClick}>
+            <a
+              href="https://www.ticketmaster.com/john-mayer-tickets/artist/770494"
+              target="_blank"
+              onClick={handleLinkClick}
+            >
               TOUR
-            </Link>
+            </a>
           </li>
           <li>
             <a href="https://johnmayerstore.com/" onClick={handleLinkClick}>

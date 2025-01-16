@@ -4,7 +4,11 @@ import React from "react";
 import { motion } from "motion/react";
 export default function MarqueeFooter() {
   return (
-    <a href="https://www.johnmayer.com/" className="marquee_container">
+    <a
+      href="https://www.johnmayer.com/"
+      target="_blank"
+      className="marquee_container"
+    >
       <motion.div
         className="marquee"
         initial={{ x: 0 }}

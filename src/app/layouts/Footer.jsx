@@ -1,7 +1,5 @@
-import { PiSpotifyLogoFill } from "react-icons/pi";
-import { FaFacebookSquare, FaYoutubeSquare, FaGithubAlt } from "react-icons/fa";
-import { AiFillTikTok } from "react-icons/ai";
-import { FaSquareXTwitter, FaSquareInstagram, FaItunes } from "react-icons/fa6";
+import { FaGithubAlt } from "react-icons/fa";
+import { IoInformationCircle } from "react-icons/io5";
 import Link from "next/link";
 import MarqueeFooter from "../../components/MarqueeFooter";
 import SocialLinks from "@/src/components/SocialLinks";
@@ -20,30 +18,34 @@ export default function Footer() {
                   <Link href="/">Home</Link>
                 </li>
                 <li>
-                  <Link href="/biography">Biography</Link>
-                </li>
-                <li>
                   <Link href="/discography">Discography</Link>
                 </li>
                 <li>
-                  <Link href="">TOUR</Link>
+                  <a
+                    href="https://www.ticketmaster.com/john-mayer-tickets/artist/770494"
+                    target="_blank"
+                  >
+                    TOUR
+                  </a>
                 </li>
                 <li>
-                  <Link href="">Store</Link>
+                  <a href="https://johnmayerstore.com/" target="_blank">
+                    Store
+                  </a>
                 </li>
               </ul>
             </nav>
             <div className="footer_item">
               <h3>Newsletter</h3>
               <form className="newsletter">
-                <label htmlFor="newsletter">Email</label>
+                <label htmlFor="newsletter">Email Address</label>
                 <input
                   type="text"
                   name="newsletter"
                   id="newsletter"
-                  placeholder="Email"
+                  placeholder="jm@unofficial.com"
                 />
-                <button type="submit">Sign Up</button>
+                <button type="submit">Submit</button>
               </form>
             </div>
             <div className="footer_item">
@@ -58,9 +60,22 @@ export default function Footer() {
           </div>
           <div className="footer_bottom">
             <SocialLinks socialContainer={"footer_social"} />
-            <span className="copyright">
-              &copy; Made and Designed by Raphael Cabigas 2024
-            </span>
+            <a
+              href="https://docs.google.com/document/d/1jEYmLIXJ96d1wI0FYcjuPneFTtmwG0MlMnq_9wptnIA/edit?tab=t.0"
+              target="_blank"
+              className="footer_acknowledgements"
+            >
+              <IoInformationCircle />
+              Additional Acknowledgements
+            </a>
+            <a
+              href="https://www.github.com/RaphaelCabigas"
+              target="_blank"
+              className="copyright"
+            >
+              <FaGithubAlt />
+              &copy; Made and Designed by Raphael Cabigas 2025
+            </a>
           </div>
         </footer>
       </div>

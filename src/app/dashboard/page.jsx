@@ -7,7 +7,8 @@ export async function generateMetadata() {
   const user = session?.user;
   return {
     title: `${user?.name}'s Dashboard`,
-    description: "Welcome to the dashboard",
+    description:
+      "A simple dashboard where you can check your account information and log out anytime.",
   };
 }
 

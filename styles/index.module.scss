@@ -92,7 +92,7 @@ span {
 }
 
 .about {
-  position: sticky;
+  position: relative;
   // ABOUT SECTION
   padding: $section-pad;
   display: grid;
@@ -354,12 +354,13 @@ span {
   }
 }
 
-.sirius_video {
+.sirius_desktop {
   display: none;
   align-self: center;
   grid-row: span 2;
   height: 700px;
-  video {
+  width: 400px;
+  img {
     border-radius: 100px 0;
     height: 100%;
   }
@@ -405,4 +406,31 @@ span {
     height: auto;
     object-fit: contain;
   }
+}
+
+.har {
+  padding: $section-pad;
+  position: sticky;
+  display: grid;
+  gap: clamp(2.25rem, 2.1786rem + 0.3571vw, 2.5rem);
+  @include tablet() {
+    padding-left: 0;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.har_img {
+  overflow: hidden;
+  border-radius: 100px 0;
+  @include tablet() {
+    border-top-left-radius: 0;
+    border-top-right-radius: 100px;
+    padding-left: 0;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.har_content {
+  display: grid;
+  gap: 10px;
 }

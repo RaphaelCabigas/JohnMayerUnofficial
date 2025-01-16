@@ -11,7 +11,9 @@ import Mayer_SVG from "@/public/svgs/MAYER.svg";
 import Tour_SVG from "@/public/svgs/TOUR.svg";
 import SobRock from "@/public/images/sr.jpg";
 import SiriusXM_1 from "@/public/images/siriusxm.jpg";
+import SiriusXM_2 from "@/public/images/sirius_img.jpg";
 import SilverSky from "@/public/images/prs.jpg";
+import HeartArmor from "@/public/images/har_img.jpg";
 import { FaYoutubeSquare, FaItunes } from "react-icons/fa";
 import { PiSpotifyLogoFill } from "react-icons/pi";
 import { SiAmazonmusic } from "react-icons/si";
@@ -25,6 +27,7 @@ export default function Home() {
     // end the animation when the center of the element meets the center of the viewport
     offset: ["start start", "center center"],
   });
+
   return (
     <>
       <HeroSection scrollProgress={scrollYProgress} />
@@ -180,25 +183,37 @@ const LatestSection = () => {
         </div>
         <ul className={S.latest_links}>
           <li>
-            <a href="">
+            <a
+              href="https://www.youtube.com/watch?v=66Ne5dVDfLM&list=OLAK5uy_kRmUW2axb9fNk3avjzMEAaMhOMHwT6L7I"
+              target="_blank"
+            >
               <span>Youtube</span>
               <FaYoutubeSquare />
             </a>
           </li>
           <li>
-            <a href="">
+            <a
+              href="https://open.spotify.com/album/2JmfwvRDitJlTUoLCkp61z"
+              target="_blank"
+            >
               <span>Spotify</span>
               <PiSpotifyLogoFill />
             </a>
           </li>
           <li>
-            <a href="">
+            <a
+              href="https://music.apple.com/us/album/sob-rock/1568819304"
+              target="_blank"
+            >
               <span>Itunes</span>
               <FaItunes />
             </a>
           </li>
           <li>
-            <a href="">
+            <a
+              href="https://music.amazon.com/albums/B095L86QZ8"
+              target="_blank"
+            >
               <span>Amazon Music</span>
               <SiAmazonmusic />
             </a>
@@ -239,7 +254,7 @@ const TourSection = () => {
             <span>Alec Benjamin</span>
           </li>
           <li>
-            <span>Special Guest TBA</span>
+            <span>Madison Cunningham</span>
           </li>
         </ul>
       </div>
@@ -277,11 +292,14 @@ const SiriusSection = () => {
           loading="lazy"
         />
       </div>
-      <div className={S.sirius_video}>
-        <video autoPlay muted loop>
-          <source src="/videos/siriusvid.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+      <div className={S.sirius_desktop}>
+        <Image
+          src={SiriusXM_2}
+          alt="John Mayer in black long sleeves playing a silver electric guitar"
+          className="next_img"
+          draggable={false}
+          loading="lazy"
+        />
       </div>
       <div className={S.sirius_content}>
         <span className="section_span">[ SIRIUS XM ]</span>
@@ -303,7 +321,7 @@ const SiriusSection = () => {
 const PrsSection = () => {
   return (
     <section className={S.prs}>
-      <div className={S.prs_img} draggable={false}>
+      <div className={S.prs_img}>
         <Image
           src={SilverSky}
           alt="SE Silver Sky Rosewood Guitar"
@@ -328,25 +346,40 @@ const PrsSection = () => {
 const HeartArmorSection = () => {
   return (
     <section className={S.har}>
-      <h2 className={S.har_heading}>Heart and Armor Foundation</h2>
-      <div className={S.har_paragraph}>
-        <p>
-          The Heart and Armor Foundation is the result of eight years of
-          research, conversations with veterans, and pilot work. It’s dedicated
-          to improving veterans' long-term health through a scientific,
-          deliberate approach that makes a lasting impact. While Heart and Armor
-          will do its part, I also hope it encourages us all to share the
-          burden—by listening, engaging, and serving one another, even when it’s
-          difficult. Together, we can help carry some of the weight that
-          veterans have shouldered for us. I'm grateful to them and invite you
-          to join in supporting their journey.
-        </p>
+      <div className={S.har_img}>
+        <Image
+          src={HeartArmor}
+          alt="Heart and Armor Foundation for Veterans Health"
+          className="next_img"
+          draggable={false}
+          loading="lazy"
+        />
+      </div>
+      <div className={S.har_content}>
         <div>
+          <span className="section_span">[ Foundation ]</span>
+          <h2 className={S.har_heading}>Heart and Armor Foundation</h2>
+        </div>
+        <div className={S.har_paragraph}>
           <p>
-            “This foundation is the culmination of eight years of research,
-            conversations with veterans, and pilot work.”
+            The Heart and Armor Foundation is the result of eight years of
+            research, conversations with veterans, and pilot work. It’s
+            dedicated to improving veterans' long-term health through a
+            scientific, deliberate approach that makes a lasting impact. While
+            Heart and Armor will do its part, I also hope it encourages us all
+            to share the burden—by listening, engaging, and serving one another,
+            even when it’s difficult. Together, we can help carry some of the
+            weight that veterans have shouldered for us. I'm grateful to them
+            and invite you to join in supporting their journey.
           </p>
-          <p style={{ fontWeight: "bold", textAlign: "right" }}>- J.M</p>
+          <br />
+          <div>
+            <p>
+              “This foundation is the culmination of eight years of research,
+              conversations with veterans, and pilot work.”
+            </p>
+            <p style={{ fontWeight: "bold", textAlign: "right" }}>- J.M</p>
+          </div>
         </div>
       </div>
     </section>

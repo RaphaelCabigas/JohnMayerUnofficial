@@ -10,29 +10,38 @@ The application should work on a mobile as well as a desktop device. You are exp
 
 You will need to design, implement as well as document the application in intervals. In the documentation, you must describe the steps you took and the reasons for the changes made incorporating images or screenshots of the process where possible. Wireframes, test plans, feedback from colleagues and commits on Git Hub could be used as the evidence of the process.
 
-### Progamming Languages & Technologies Used
+### Programming Languages & Technologies Used
 
-- **Javascript**:
-- **React**:
-- **Sass**:
-- **MongoDB**: Managing user's data for registration and login.
-- **Next.js**:
-- **NextAuth.js**: Authentication and authorization
+## Frontend:
 
-### Dependencies
+- **React**: For building the front-end interface.
+- **Next.js**: For App routing between pages.
+
+## Backend
+
+- **Next.js**: For handling API routes.
+- **MongoDB**: For managing user's data such as registration, login, and a simple dashboard.
+- **NextAuth.js**: For implementing an easier authentication and authorization system.
+
+## Dependencies
 
 - **bcrypt**: For hashing and comparing passwords.
 - **motion**: Animation Library for React.
 - **react-icons**: Icon Library for React.
 
-## Credits
+### Credits
 
 This project uses images, content, and data from the following platforms:
 
-- **Discogs**: For albums and cover art, and information
+- **John Mayer Official**: For inspiration, images and content.
+- **PRS Guitars**: For images and content.
+- **Heart and Armor Foundation**: For images and content.
+- **Discogs**: For albums and cover art, and information.
 - **Wikipedia**: For general information and references.
 - **Flickr**: For images.
 - **YouTube**: For video snippets.
+
+For further details about the sources used can be found in this [link.] (https://docs.google.com/document/d/1jEYmLIXJ96d1wI0FYcjuPneFTtmwG0MlMnq_9wptnIA/edit?usp=sharing)
 
 ### DISCLAIMER
 

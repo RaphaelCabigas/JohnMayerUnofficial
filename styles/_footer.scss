@@ -1,3 +1,4 @@
+@use "mixins" as *;
 /* @link https://utopia.fyi/clamp/calculator?a=320,1440,27—30 */
 $section-pad: clamp(1.6875rem, 1.6339rem + 0.2679vw, 1.875rem);
 
@@ -48,10 +49,19 @@ footer {
   z-index: 1;
   min-height: 100vh;
   padding: $section-pad;
-  background-color: black;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../public/images//footer_bg.jpg");
+    filter: grayscale(100) brightness(0.06);
+  }
 }
 
 .footer_top {
@@ -134,10 +144,23 @@ footer {
 
 .footer_bottom {
   margin-top: 70px;
+  text-align: center;
+  @include desktop() {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+}
+
+.footer_acknowledgements {
+  margin-top: 60px;
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
+  gap: 10px;
+  font-family: "Satoshi", sans-serif;
+  color: white;
 }
 
 .copyright {
@@ -147,16 +170,4 @@ footer {
   gap: 10px;
   font-family: "Satoshi", sans-serif;
   margin-top: 50px;
-}
-
-@media (min-width: 850px) {
-  .footer_bottom {
-    margin-top: 0px;
-    padding-block: 30px;
-    justify-content: space-between;
-  }
-
-  .copyright {
-    margin-top: 0;
-  }
 }

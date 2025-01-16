@@ -28,7 +28,9 @@ export async function getAlbumImages(id) {
     // map every image within the folder
     return imageFiles.map((file) => `/${id}/${file}`);
   } catch (error) {
-    console.error("Image directory not found");
+    // console.error("No linked album images found");
+    // just return empty
+    return [];
   }
 }
 

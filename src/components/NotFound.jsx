@@ -8,13 +8,6 @@ export default function NotFound() {
       <Link href="/" className={S.home_link}>
         Return Home
       </Link>
-      <a
-        href="https://www.youtube.com/watch?v=gui8D572lzY&list=PLyPJH8P_5tYrNrnvUV-F4CYP0TQP4JX9c&index=22"
-        target="_blank"
-        className={S.music_link}
-      >
-        Tracing
-      </a>
     </section>
   );
 }
