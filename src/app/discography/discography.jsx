@@ -1,5 +1,5 @@
 import Image from "next/image";
-import dataAlbums from "@/src/albums.json";
+import dataAlbums from "@/public/albums.json";
 import AlbumList from "@/src/components/AlbumList";
 import S from "@/styles/discography.module.scss";
 import Hero from "@/public/images/disco-hero.jpg";
