@@ -41,7 +41,7 @@ This project uses images, content, and data from the following platforms:
 - **Flickr**: For images.
 - **YouTube**: For video snippets.
 
-For further details about the sources used can be found in this [link.] (https://docs.google.com/document/d/1jEYmLIXJ96d1wI0FYcjuPneFTtmwG0MlMnq_9wptnIA/edit?usp=sharing)
+For further details about the sources used can be found in this [link.](https://docs.google.com/document/d/1jEYmLIXJ96d1wI0FYcjuPneFTtmwG0MlMnq_9wptnIA/edit?usp=sharing)
 
 ### DISCLAIMER
 
