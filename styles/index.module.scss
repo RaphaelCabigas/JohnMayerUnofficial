@@ -293,6 +293,8 @@ span {
 }
 
 .tour_heading {
+  display: flex;
+  flex-direction: column;
   grid-row: 2;
   grid-column: span 12;
   @include desktop() {

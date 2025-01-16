@@ -29,7 +29,7 @@ export default function Footer() {
                   <Link href="">TOUR</Link>
                 </li>
                 <li>
-                  <Link href="">MERCH</Link>
+                  <Link href="">Store</Link>
                 </li>
               </ul>
             </nav>
@@ -49,21 +49,18 @@ export default function Footer() {
             <div className="footer_item">
               <h3>Copyright</h3>
               <p className="purposes">
-                John Mayer Unofficial uses images and content solely for
-                educational purposes and not for commercial gain. All rights to
-                the original content belong to their respective owners.
+                John Mayer Unofficial uses images, content, and information
+                solely for educational project purposes and not for commercial
+                gain. All rights to the original content belong to their
+                respective owners.
               </p>
             </div>
           </div>
           <div className="footer_bottom">
             <SocialLinks socialContainer={"footer_social"} />
-            <a
-              href="https://www.github.com/RaphaelCabigas"
-              className="copyright"
-            >
-              <FaGithubAlt />
-              <span>&copy; Made and Designed by Raphael Cabigas 2024</span>
-            </a>
+            <span className="copyright">
+              &copy; Made and Designed by Raphael Cabigas 2024
+            </span>
           </div>
         </footer>
       </div>

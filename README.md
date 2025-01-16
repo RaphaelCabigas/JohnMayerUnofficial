@@ -15,7 +15,7 @@ You will need to design, implement as well as document the application in interv
 - **Javascript**:
 - **React**:
 - **Sass**:
-- **MongoDB**: Managing user registration and login.
+- **MongoDB**: Managing user's data for registration and login.
 - **Next.js**:
 - **NextAuth.js**: Authentication and authorization
 
@@ -23,16 +23,16 @@ You will need to design, implement as well as document the application in interv
 
 - **bcrypt**: For hashing and comparing passwords.
 - **motion**: Animation Library for React.
-- \*_react-icons_: Icon Library for React.
+- **react-icons**: Icon Library for React.
 
 ## Credits
 
-This project uses images, content, and data from the following platforms
+This project uses images, content, and data from the following platforms:
 
 - **Discogs**: For albums and cover art, and information
 - **Wikipedia**: For general information and references.
 - **Flickr**: For images.
-<!-- - **Youtube**: For the unreleased John Mayer tracks. -->
+- **YouTube**: For video snippets.
 
 ### DISCLAIMER
 

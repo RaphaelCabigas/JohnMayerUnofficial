@@ -137,7 +137,7 @@ export default function LogIn() {
             </div>
           </div>
           <p>
-            <span>Don't have an account? </span>
+            <span>Don't have an account yet? </span>
             <Link href="/register" className={S.form_link}>
               Create an Account
             </Link>

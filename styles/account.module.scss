@@ -22,7 +22,7 @@
   }
 
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     position: relative;
     &::after {
       content: "";
@@ -30,7 +30,7 @@
       position: absolute;
       display: block;
       background-color: black;
-      height: 1px;
+      height: 0.5px;
       width: 45%;
       margin-top: 8px;
       right: 0;
@@ -44,7 +44,7 @@
       position: absolute;
       display: block;
       background-color: black;
-      height: 1px;
+      height: 0.5px;
       width: 45%;
       margin-top: 8px;
       top: 0;

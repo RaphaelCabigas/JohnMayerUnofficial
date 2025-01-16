@@ -122,7 +122,7 @@ export default function RegisterPage() {
           <h2>OR</h2>
           <div>
             <p>
-              <span>Do you have an account? </span>
+              <span>Already have an account? </span>
               <Link href="/login" className={S.form_link}>
                 Log In
               </Link>

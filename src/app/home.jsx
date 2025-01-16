@@ -139,7 +139,7 @@ const DiscographySection = () => {
               drag
               dragConstraints={constraints}
               whileHover={{ cursor: "grab" }}
-              whileTap={{ cursor: "grabbing" }}
+              whileTap={{ cursor: "grabbing", scale: 1.5 }}
             >
               <Image
                 src={`/images/${album.src}.jpg`}
@@ -226,7 +226,7 @@ const TourSection = () => {
         />
       </div>
       <h2 className={S.tour_heading}>
-        <span>[ SIRIUS XM ]</span>
+        <span className="section_span">[ TOUR ]</span>
         <span>John Mayer Solo Tour</span>
       </h2>
       <div className={S.tour_feature}>
@@ -282,11 +282,9 @@ const SiriusSection = () => {
           <source src="/videos/siriusvid.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <ul>
-          <li></li>
-        </ul>
       </div>
       <div className={S.sirius_content}>
+        <span className="section_span">[ SIRIUS XM ]</span>
         <h1>Life with John Mayer</h1>
         <p>
           A music experience hand-selected by John Mayer. The guitarist and
