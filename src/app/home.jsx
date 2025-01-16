@@ -17,7 +17,7 @@ import HeartArmor from "@/public/images/har_img.jpg";
 import { FaYoutubeSquare, FaItunes } from "react-icons/fa";
 import { PiSpotifyLogoFill } from "react-icons/pi";
 import { SiAmazonmusic } from "react-icons/si";
-import dataAlbums from "@/src/albums.json";
+import dataAlbums from "@/public/albums.json";
 import { useRef } from "react";
 import Link from "next/link";
 

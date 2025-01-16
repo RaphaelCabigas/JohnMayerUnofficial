@@ -1,4 +1,4 @@
-import dataAlbums from "@/src/albums.json";
+import dataAlbums from "@/public/albums.json";
 import fs from "fs/promises";
 import path from "path";
 import { notFound } from "next/navigation";
