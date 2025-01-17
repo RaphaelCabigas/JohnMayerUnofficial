@@ -16,6 +16,11 @@ export default function LogIn() {
   const [isGoogleLoading, setIsGoogleLoading] = useState(false);
   const [isGithubLoading, setIsGithubLoading] = useState(false);
   const [error, setError] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [passwordError, setPasswordError] = useState("");
+  // Characters be min 5 to max 40 characters only allowing letters upper and lower cases, hyphens, underscores and numbers
+  const emailValidation = /^[a-zA-Z0-9_-]{5,40}@jm\.unofficial$/;
+  const passwordValidation = /^[a-zA-Z0-9_-]{5,40}$/;
 
   const handleSubmit = async (e) => {
     // prevent the default form submission behavior
@@ -28,10 +33,28 @@ export default function LogIn() {
     setIsLoading(true);
     setError("");
 
+    let errorFields = false;
+
     // Check if all fields are filled out then display error message
     if (!email || !password) {
-      setIsLoading(false);
       setError("All fields are required.");
+      errorFields = true;
+    }
+
+    if (!emailValidation.test(email)) {
+      setEmailError(
+        "Please enter a valid email address that ends with @jm.unofficial."
+      );
+      errorFields = true;
+    }
+
+    if (!passwordValidation.test(password)) {
+      setPasswordError("Password must be between 5 and 40 characters long");
+      errorFields = true;
+    }
+
+    if (errorFields) {
+      setIsLoading(false);
       return;
     }
 
@@ -76,7 +99,7 @@ export default function LogIn() {
     <section className={S.form_container}>
       <form onSubmit={handleSubmit} autoComplete="off" className={S.form_form}>
         <h1>Welcome Back!</h1>
-        <p>Log In to your account</p>
+        <p className={S.form_heading_2}>Log In to your account</p>
         <div className={S.form_content}>
           <div className={S.form_fields}>
             <div>
@@ -107,7 +130,23 @@ export default function LogIn() {
             >
               {isLoading ? "Logging in Account..." : "Log In"}
             </button>
-            {error && <p className={S.form_error}>{error}</p>}
+            <ul className={S.form_errors}>
+              <li>
+                <p className={S.form_message}>
+                  * fields can only contain letters, numbers, underscores, and
+                  hyphens.
+                </p>
+              </li>
+              <li>{error && <p className={S.form_error}>{error}</p>} </li>
+              <li>
+                {emailError && <p className={S.form_error}>{emailError}</p>}
+              </li>
+              <li>
+                {passwordError && (
+                  <p className={S.form_error}>{passwordError}</p>
+                )}
+              </li>
+            </ul>
           </div>
           <h2>OR</h2>
           <div>
@@ -136,7 +175,7 @@ export default function LogIn() {
               </button>
             </div>
           </div>
-          <p>
+          <p className={S.link}>
             <span>Don't have an account yet? </span>
             <Link href="/register" className={S.form_link}>
               Create an Account
