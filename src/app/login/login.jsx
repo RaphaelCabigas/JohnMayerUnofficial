@@ -134,24 +134,22 @@ export default function LogIn() {
             >
               {isLoading ? "Logging in Account..." : "Log In"}
             </button>
-            <ul className={S.form_errors}>
-              <li>
-                <p className={S.form_message}>
-                  * fields can only contain letters, numbers, underscores, and
-                  hyphens.
-                </p>
-              </li>
-              <li>{error && <p className={S.form_error}>{error}</p>} </li>
-              <li>
-                {emailError && <p className={S.form_error}>{emailError}</p>}
-              </li>
-              <li>
-                {passwordError && (
-                  <p className={S.form_error}>{passwordError}</p>
-                )}
-              </li>
-            </ul>
           </div>
+          <ul className={S.form_errors}>
+            <li>
+              <p className={S.form_message}>
+                * fields can only contain letters, numbers, underscores, and
+                hyphens.
+              </p>
+            </li>
+            <li>{error && <p className={S.form_error}>{error}</p>} </li>
+            <li>
+              {emailError && <p className={S.form_error}>{emailError}</p>}
+            </li>
+            <li>
+              {passwordError && <p className={S.form_error}>{passwordError}</p>}
+            </li>
+          </ul>
           <h2>OR</h2>
           <div>
             <div className={S.form_options}>
