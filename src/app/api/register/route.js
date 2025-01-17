@@ -3,12 +3,37 @@ import User from "@/src/models/user";
 import { NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 
+const emailValidation = /^[a-zA-Z0-9_-]{5,40}@jm\.unofficial$/;
+const nameValidation = /^[a-zA-Z0-9_-]{5,40}$/;
+const passwordValidation = /^[a-zA-Z0-9_-]{5,40}$/;
+
 // User registration/creation
 export async function POST(request) {
     try {
         await connectDB();
         // Get the user data from the request body
         const { name, email, password, oauthProviders } = await request.json();
+        // Stores the error messages
+        const errors = [];
+
+        // Testing field validations through api calls through thunder client
+        if (!email || !name || !password) {
+            errors.push({ message: "All fields are required." });
+        }
+        if (!nameValidation.test(name)) {
+            errors.push({ name_error: "Invalid name 5-40 chars (a-z, A-Z, 0-9, underscores, and hyphens)" });
+        }
+        if (!emailValidation.test(email)) {
+            errors.push({ email_error: "Invalid email 5-40 chars (a-z, A-Z, 0-9, underscores, and hyphens) ending with @jm.unofficial." });
+        }
+
+        if (!passwordValidation.test(password)) {
+            errors.push({ password_error: "Invalid password 5-40 chars (a-z, A-Z, 0-9, underscores, and hyphens)" });
+        }
+        // If there are any errors, return an error response with the errors array
+        if (errors.length > 0) {
+            return NextResponse.json({ errors }, { status: 400 });
+        }
 
         // Check if the user already exists with the same email
         const userExists = await User.findOne({ email });
