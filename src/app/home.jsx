@@ -160,7 +160,13 @@ const DiscographySection = () => {
       <p className={S.discography_notif}>click and drag the albums!</p>
       <div className={S.discography_content}>
         <h2>DISCOGRAPHY</h2>
-        <Link href="/discography">View More</Link>
+        <Link
+          href="/discography"
+          className="section_link
+        "
+        >
+          View More
+        </Link>
       </div>
     </motion.section>
   );
@@ -220,6 +226,13 @@ const LatestSection = () => {
           </li>
         </ul>
       </div>
+      <Link
+        href="
+      /discography/sob-rock"
+        className={S.latest_route + " section_link"}
+      >
+        View More
+      </Link>
     </section>
   );
 };

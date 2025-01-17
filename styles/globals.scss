@@ -150,6 +150,31 @@ section {
   -webkit-user-drag: none;
 }
 
+.section_link {
+  -webkit-text-stroke: 0;
+  font-size: 5rem;
+  font-family: "Robson", sans-serif;
+  width: fit-content !important;
+  mix-blend-mode: difference;
+  color: white;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 10px;
+    border-radius: 0 20px;
+    background-color: white;
+    transition: width 0.5s ease;
+  }
+  &:hover::before {
+    width: 100%;
+    text-decoration: underline;
+  }
+}
+
 // SCSS for Robson Font Family
 @font-face {
   font-family: "Robson";

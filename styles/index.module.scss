@@ -156,10 +156,6 @@ span {
   flex-direction: column-reverse;
   -webkit-text-stroke-width: 1.5px;
   -webkit-text-stroke-color: black;
-  a {
-    font-size: 6rem;
-    width: fit-content;
-  }
 }
 
 .disco_img {
@@ -191,6 +187,16 @@ span {
   }
 }
 
+.latest_route {
+  text-align: center;
+  grid-column: span 7;
+  @include desktop() {
+    position: absolute;
+    left: 50px;
+    bottom: 40px;
+  }
+}
+
 .latest_content {
   grid-column: span 7;
   @include tablet() {
@@ -217,20 +223,6 @@ span {
   }
 }
 
-// ! important
-.section_link {
-  margin-top: 40px;
-  font-family: "Satoshi";
-  font-weight: 100;
-  font-size: 1.5rem;
-  display: grid;
-  align-items: center;
-  grid-template-columns: auto 1fr;
-  span {
-    position: relative;
-  }
-}
-
 .tour {
   padding: $section-pad;
   position: sticky;
@@ -241,15 +233,6 @@ span {
   @include tablet() {
     grid-template-columns: repeat(12, 1fr);
     gap: clamp(2.25rem, 2.1786rem + 0.3571vw, 2.5rem);
-  }
-  .section_link {
-    align-self: end;
-    margin-top: 0;
-    grid-column: span 12;
-    @include desktop() {
-      grid-row: 2;
-      grid-column: span 2;
-    }
   }
 }
 
