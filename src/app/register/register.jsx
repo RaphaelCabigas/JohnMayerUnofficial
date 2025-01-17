@@ -44,7 +44,7 @@ export default function RegisterPage() {
 
     if (!emailValidation.test(email)) {
       setEmailError(
-        "Please enter a valid email address that ends with @jm.unofficial."
+        "Email must be between 5 and 40 characters long, EXCLUDING @jm.unofficial, and end with @jm.unofficial."
       );
       errorFields = true;
     }
