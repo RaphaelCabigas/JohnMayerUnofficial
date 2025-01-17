@@ -19,6 +19,8 @@ export default function LogIn() {
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
   // Characters be min 5 to max 40 characters only allowing letters upper and lower cases, hyphens, underscores and numbers
+  // https://stackoverflow.com/questions/22951369/regex-to-match-a-period
+  // https://ihateregex.io/expr/username
   const emailValidation = /^[a-zA-Z0-9_-]{5,40}@jm\.unofficial$/;
   const passwordValidation = /^[a-zA-Z0-9_-]{5,40}$/;
 
@@ -32,6 +34,8 @@ export default function LogIn() {
     const password = formData.get("password");
     setIsLoading(true);
     setError("");
+    setEmailError("");
+    setPasswordError("");
 
     let errorFields = false;
 
